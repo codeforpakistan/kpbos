@@ -1,0 +1,45 @@
+/* Theme transition Effect */
+*:after,
+*:before,
+a,
+p,
+h1,h2,h3,h4,h5,h6,
+button,
+.quick-links-figure,
+.quick-links-figure .overlay,
+.quick-links-figure .overlay span,
+.team-column .overlay,
+.team-column > img,
+.product-img .overlay,
+.post-slider .slick-dots li,
+.twitter-column,
+.overlay,
+.nav-list li ul,
+.nav-list > li ul li,
+.select-options,
+.gallery-figure img,
+.play-icon,
+.supporter-list li img,
+.toltip,
+.sticky-nav .icon-bar span,
+.new-arthor,
+.news-img img,
+.team-column.style-3 .overlay .social-icons,
+.team-column.style-3 .overlay .detail
+{-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;}
+.slide-form
+{-webkit-transition: all 0.8s ease-in-out;
+-moz-transition: all 0.8s ease-in-out;
+-ms-transition: all 0.8s ease-in-out;
+-o-transition: all 0.8s ease-in-out;
+transition: all 0.8s ease-in-out;}
+
+
+
+
+
+

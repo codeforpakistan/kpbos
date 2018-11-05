@@ -1,0 +1,121 @@
+/***** Theme Primary Color (Blue) ******/
+
+/* color */
+a:hover,
+p a:hover,
+h1 a:hover, 
+h2 a:hover, 
+h3 a:hover, 
+h4 a:hover, 
+h5 a:hover, 
+h6 a:hover,
+.social-icons li a:hover,
+.nav-list > li > a:hover,
+.theme-color,
+.event-heading strong,
+.event-acounter ul li::before,
+.facts-lsit li h2,
+.facts-lsit li span,
+.campgain-list .date,
+.catagory-drop span i,
+.change-view i,
+.shares-option li i,
+.blog .detail .btn,
+.google-progress span,
+.online-poll .btn-list li .btn,
+.blog-detail h2:hover,
+.blog.style-2 .shares-option .read-more:hover,
+.blog-article blockquote,
+.blog-article blockquote::before,
+.tc-filterbale-nav ul li a.selected,
+.change-view-list li a i,
+.arthor-detail .btn,
+.event-aside .location-list li.active a,
+.event-single-detail .btn.light,
+.speechs-content .meta-post li a i,
+.speech-detail-modal .btm ul li a i,
+.main-heading .heading-star,
+.election-date span::before,
+.election-date span::after,
+.pool-radio:checked + label,
+.footer-links li a:hover,
+.supporter-list li a .toltip::before,
+.click-users li a.color
+{ color: rgba(67, 134, 31, 0.93);}
+
+
+/* Background Color */
+.btn,
+.multipul-lines li.bg-1,
+.play-icon span,
+.btn.dark:hover,
+.event-detail .detail .detail-header,
+.product-img .rate-batch,
+.img-batch,
+.blog .detail .btn:hover,
+.post-slider .slick-dots li.slick-active,
+.pagination-holder ul li.active a,
+.pagination-holder ul li a:hover,
+.saerch-widget button,
+.online-poll .btn-list li .btn:hover,
+.tags-list ul li a:hover,
+.donate-prog .progress .progress-bar,
+.arthor-detail .btn:hover,
+.speakers-list ul li .plus,
+.event-single-detail .btn.light:hover,
+.pricing .btn:hover,
+.speechs-content .latest-batch,
+.speechs-content:hover::before,
+.speech-detail-modal::before,
+.tc-skillbar,
+.theme-pannels > h3,
+.pool-radio:checked + label:after,
+.range-slider .rangeslider__fill,
+.btn.light:hover,
+.nav-inner.style-2 .nav-list > li > ul li a,
+.sticky-nav h2,
+.speechs-list.style-2 .speechs-content:hover::before,
+.speechs-list.style-2 .speech-detail-modal:hover::before,
+.supporter-list li a .toltip,
+.sticky-nav .nav-list > li > ul li a
+{ background: rgba(67, 134, 31, 0.93);}
+
+/* Border Color */
+.quick-links-figure::before,
+.left-heading,
+.blog-detail .btn,
+.pagination-holder ul li .btn:hover,
+.online-poll .btn-list li .btn,
+.blog-article p .capital-word,
+.tags-list ul li a:hover,
+.single-team-detail h2,
+.single-team-detail h2::before,
+.event-aside .location-list li.active a,
+.event-aside .location-list li a:hover,
+.arthor-detail .btn,
+.event-single-detail .btn.light,
+.speechs-content:hover::before,
+.speech-detail-modal::before,
+.heading-second h3::before,
+.fact-section-holder,
+.pool-radio:checked + label:before,
+.btn.light:hover,
+.new-arthor.active,
+.main-heading-holder.style-2 h2::before,
+.new-figure:hover .new-arthor
+{ border-color: rgba(67, 134, 31, 0.1);}
+
+
+/* Background RGba Color Dark */
+.inner-banner.team::before,
+.address,
+.instagram-figure .overlay
+{ background: rgba(67, 134, 31, 0.93);}
+
+/* Background RGba Color Light */
+.quick-links-figure:hover .overlay
+{
+    color:red !important;
+  background: rgba(236, 218, 253, 0.00);
+
+}

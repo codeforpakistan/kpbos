@@ -1,0 +1,518 @@
+@media (max-width: 1200px) {
+	.caption h1{ font-size: 30px;}
+	.caption p{ font-size: 11px;}
+	.banner-layer{ margin: 0;}
+	.banner-layer img{ width: 100%;}
+	.contribution-wigdet p{ font-size: 12px;}
+	.join-us form .form-group.width-btn .btn{ width: 45%; padding: 0;}
+	.click-users li a{ letter-spacing: -18px;}
+	.services-column h5{ font-size: 15px;}
+	.services-column p{ font-size: 12px;}
+	.detail-btm ul li{ padding: 20px 20px;}
+	.subscribe form .btn{ padding: 0; min-width: 150px!important;}
+	.new-figure h3{ font-size: 20px;}
+	.share-options ul li{ margin: 0 0 0 5px;}
+	.share-options .read-more{ font-size: 11px;}
+	.share-options .read-more i{ margin: 0 5px 0 0;}
+
+	.nav-inner.style-2 > ul > li > a{ padding: 20px 10px;}
+	.caption.style-2 p{ font-size: 15px;}
+	.caption.style-2{ padding: 80px 0 0;}
+	.caption.style-2 h1{ font-size: 30px;}
+	.left-heading h2{ font-size: 19px;}
+	.about-us h2{ font-size: 40px;}
+	.about-us h4{ font-size: 15px;}
+	.about-us p{ font-size: 12px;}
+	.services-column.style-2 h4{ font-size: 14px;}
+	.motivational-quotes{ padding: 60px 60px 80px;}
+	.campgain-list-holder .left-heading h2{ font-size: 25px;}
+	.team-column .overlay .detail h2{ font-size: 20px;}
+	.left-heading.style-3 .btn{ min-width: 100%;}
+	.left-heading.style-3{ padding: 20px 0 0;}
+	.enter-your-own{ width: 136px;}
+	.select-amount{ font-size: 16px; width: 62px;}
+	.donate-type > .btn i{ margin: 0;}
+	.donate-type > .btn{ position: absolute; padding: 0; min-width: 40px;}
+	.form-widget{ padding: 65px 24px;}
+	.select-amount-holder{ margin: 0 0 20px;}
+
+	.about.style-2 .right-side ul li{ margin: 0 0 22.3px;}
+	.about-flag{ width: 50%; margin: 59px 0 0 0;}
+
+	.slide-caption{ margin: -100px 30px 0;}
+	.slide-caption h3{ line-height: 25px; font-size: 18px;}
+	.detail h2{ font-size: 30px;}
+
+	.team.none-margin .team-column{ margin: 0!important;}
+
+	.sticky-nav .nav-list > li > a{ padding: 23px 21.74%;}
+}
+
+@media (max-width: 1199px) {
+	.logo-bar .left-side p{ font-size: 12px;}
+	.nav-list > li > a{ padding: 22px 12px; font-size: 10px;}
+	.logo-bar .right-side ul{ display: none;}
+	.banner{ overflow: hidden;}
+	.services-column{ padding: 0;}
+	.caption h1{ font-size: 20px;}
+	.caption p{ line-height: 20px;}
+	.quick-links-figure .overlay h5{ font-size: 12px;}
+	.quick-links-figure .overlay span{ font-size: 12px;}
+	.new-figure h3{ font-size: 16px; margin: 0 0 30px;}
+	.share-options{ text-align: center;}
+	.share-options .read-more{ float: none; margin: 0 0 10px;}
+	.share-options ul{ float: none; display: inline-block;}
+	.new-arthor span{ font-size: 10px;}
+	.event-heading h2{ font-size: 29px;}
+	.testimonial-content p{ font-size: 16px;} 
+	.contribution-wigdet h4{ font-size: 16px;}
+	.contribution-wigdet p{ font-size: 11px; margin: 0;}
+	.subscribe form .form-control{ width: 60%; font-size: 12px;}
+	.contribution-tabs .nav-tabs li a{ font-size: 10px;}
+	.content-wigdet p{ font-size: 10px;}
+	.contribution-tabs .content-wigdet strong{ font-size: 38px;}
+	.content-wigdet .btn{ padding: 0; min-width: 100%;}
+	.join-us input{ font-size: 12px;}
+	.join-us form .form-group.width-btn .btn{ font-size: 11px;}
+	.twit-figure{ padding: 30px 20px;}
+	.twit-figure p{ font-size: 14px;}
+	.event-acounter ul li{ font-size: 30px;}
+	.facts-lsit li h2{ font-size: 30px;}
+	.facts-lsit li span{ font-size: 30px;}
+	.facts-lsit li h6{ font-size: 12px;}
+	.facts-lsit li::before{ height: 120px; left: -10px; top: -30px; width: 80px;}
+
+	.caption.style-2 h1{ font-size: 22px;}
+	.header.style-2 .donate-btn{ display: none;}
+	.nav-inner.style-2 > ul > li > a{ padding: 20px 7px;}
+	.caption.style-2 p{ font-size: 14px;}
+	.about-us{ background: rgba(0,0,0,0.7); border: 0;}
+	.motivational-quotes{ padding: 30px; left: 50px; margin: 60px 0 0;}
+	.motivational-quotes p{ font-size: 14px;}
+	.left-heading.style-2{ padding: 20px 0 0;}
+	.left-heading.style-2 .btn{ min-width: 100%; padding: 0;}
+	.left-heading.style-3 .btn{ padding: 0;}
+	.form-widget > div{ width: 50%; margin: 0 auto;}
+	.joining-form{ background-size: 100% 100%!important;} 
+
+	.about-quote h2{ font-size: 33px;}
+	.about-quote p{ font-size: 13px;}
+	.our-mission article p{ font-size: 13px;}
+	.about.style-2 .right-side ul li{ padding: 20px 0 20px 80px;}
+	.progress-section{ padding: 0;}
+	.theme-pannels{ margin: 0 100px;}
+	.event-reviews.style-2{ padding: 0 50px;}
+
+	.blog.style-3 .detail h3{ font-size: 17px;}
+	.shares-option ul li{ margin: 0 0 0 4px;}
+
+	.leave-reply{ margin: 0 0 80px;}
+
+	.event-post-list{ padding-right: 0;}
+	.arthor-detail .arthor{ margin: 0 30px 0 0;}
+
+	.page-heading h2{ font-size: 40px;}
+
+	.nav-arrows{ line-height: 118px;}
+
+	.single-team-img{ max-height: 500px; overflow: hidden;}
+	.single-team-img > img{ width: 100%;}
+	.single-team-detail{ padding: 30px;}
+	.single-team-detail p{ font-size: 13px;}
+	.tc-filterbale-nav ul li a{ padding: 0 26px;}
+	.facts-lsit.style-3 ul li{ width: 22.6%;}
+	.newsletter h3{ font-size: 22px; line-height: 25px;}
+	.supporter-list li{ margin: 11px 0 11px 22.2px;}
+
+}
+
+@media (max-width: 1024px) {
+	.logo-bar .left-side p{ font-size: 12px;}
+
+	.aside::before{ width: 100%;}
+	.aside{ width: 50%; margin: 0 auto;}
+
+	.blog-content{ padding-right: 0!important;}
+
+	.location-date ul li h6{ font-size: 13px;}
+	.location-date ul li span{ font-size: 10px;}
+	.speakers-list ul li:first-child{ margin: 0;}
+	.campgain-list .detail{ margin: 0;}
+	.campgain-list .date{ margin: 0 10px 0 0;}
+	.campgain-list .donation-target{ float: none;}
+	.campgain-list-holder.style-2 .donation-target.m-left{ margin-left: 30px;}
+
+	.event-single-title h5{ font-size: 11px;}
+	.event-single-detail .btn{ width: 100%; padding: 0;} 
+	.donate-prog label{ font-size: 11px;}
+
+	.event-video iframe{ height: 268px;}
+	.speakers-grid .speaker-detail h4{ font-size: 12px;}
+	.speakers-grid .speaker-detail span{ font-size: 12px;}
+	.speakers-grid .speaker-detail ul li{ font-size: 11px;}
+
+	.pricing{ margin: 15px 0;}
+
+	.nav-arrows{ line-height: 90px;}
+
+}
+
+@media (max-width: 991px) {
+	.logo-bar .left-side p{ font-size: 11px;}
+	.logo-bar .logo a > img{ width: 80%;}
+	.logo-bar .left-side{ padding: 24px 0;}
+	.logo-bar .right-side{ padding: 21px 0;}
+	.year-quest span{ font-size: 20px;}
+	.year-quest span em{ font-size: 30px;}
+	.js .nav-list{ display:none;}
+	.nav-inner{ display: none;}
+	.js .slicknav_menu{ display:block;}
+	.caption h1{ font-size: 14px;}
+	.caption p{ font-size: 13px;}
+	.caption img{ width: 40%;}
+	.my-mission{ margin: 0 0 40px;}
+	.contribution-tabs .nav-tabs{ position: static;}
+	.quick-links-figure{ margin: 15px 0;}
+	.event-heading{ display: none;}
+	.event-map{ height: 540px;}
+	.event-acounter ul li::before{ line-height: 34px;}
+	.event-acounter ul li{ font-size: 24px;}
+	.election-date span{ font-size: 16px;}
+	.gallery-figure h5{ font-size: 12px;}
+	.testimonial-content h2{ font-size: 30px;}
+	.testimonial-content p{ font-size: 12px;}
+	.facts-lsit li h6{ font-size: 10px;}
+	.footer-links{ margin: 0 0 15px;}
+	.subscribe form .form-control{ width: 100%; margin: 0 0 10px;}
+	.subscribe form .btn{ width: 100%; float: left;}
+	.logo-bar .left-side p{ font-size: 8px;}
+	.logo-bar .right-side{ padding: 18px 0;}
+
+	.header.style-2{ text-align: center;}
+	.logo.style-2{ float: none;}
+	.caption.style-2 h1{ font-size: 16px; margin: 0 0 15px;}
+	.caption.style-2 img{ margin: 0 0 15px;}
+	.caption.style-2 .btn{ min-width: 100px; padding: 0 20px; height: 40px; line-height: 40px;}
+	.left-heading{ margin: 0 0 30px;}
+	.quotes-title{ padding: 40px 0 0;}
+	.motivational-quotes{ position: static; margin: 0; padding: 20px;}
+	.gallery-figure img{ width: 100%;}
+	.team-column{ margin: 15px 0!important;}
+	.form-widget > div{ width: 100%;}
+	.footer-content{ padding-bottom: 0;}
+	.footer.style-2 .footer-social{ text-align: left; padding: 0;}
+	.subscribe.style-2{ padding: 30px 0;}
+	.about-quote h2{ letter-spacing: 0;}
+	.stretegy-column{ margin: 0 0 30px;}
+	.fact-section-holder{ background-size: 100% 100%!important;}
+	.about-flag{ display: none;}
+	.theme-pannels{ margin: 0 30px;}
+
+	.donate-prog.style-2{ margin: 0 0 20px;}
+
+	.event-aside.style-2{ padding: 30px; margin: 20px 0 0;}
+
+	.page-heading h2{ font-size: 35px;}
+
+	.blog-1 .col-lg-8.col-md-7.col-xs-12.p-0{ padding: 0 30px!important;}
+	.blog-3 .col-lg-8.col-md-7.col-xs-12.p-0{ padding: 0 30px!important;}
+	.blog-1 .blog-content{ padding: 0;}
+	.blog-3 .blog-content{ padding: 0;}
+
+	.aside{ margin: 80px auto 0;}
+
+	.icon-bar{ display: none;}
+
+	.quick-links-figure.style-2 h3{ font-size: 20px;}
+	.about-text h3{ font-size: 20px;}
+	.gallery-figure.style-3 .play-icon{ height: 40px; line-height: 45px; width: 50px;}
+	.gallery-figure.style-3 .play-icon i{ font-size: 20px;}
+	.facts-lsit.style-3 ul li{ padding: 30px 20px; width: 21.8%;}
+	.fact-section-holder .facts-lsit.style-3 ul li h6{ font-size: 13px; margin: 0 0 10px;}
+
+	.supporter-list li{ margin: 6px 0 6px 18.8px;}
+	.banner.style-3 .banner-layer{ margin: 0 0 0 -72px;}
+}
+
+@media (max-width: 800px) {
+	.banner-layer{ margin: -30px 0 0 -52px !important;}
+}
+
+@media (max-width: 767px) {
+	.caption{ padding: 50px 0 0;}
+	.caption p{ display: contents;}
+	.about-video h2{ font-size: 30px;}
+	.about-video h3{ font-size: 12px;}
+	.about-video p{ font-size: 10px;}
+	.play-icon{ height: 80px; line-height: 110px; width: 113px; margin: 0;}
+	.event-detail .detail .detail-header h2{ font-size: 20px;}
+	.event-detail .detail .detail-header p{ font-size: 13px;}
+	.detail h2{ font-size: 23px;}
+	.detail p{ font-size: 10px;}
+	.event-detail .detail-content span{ font-size: 14px;}
+	.detail-btm ul li{ font-size: 11px;}
+	.event-acounter ul li::before{ font-size: 8px; line-height: 21px;}
+	.event-acounter ul li{ font-size: 14px;}
+	.event-acounter ul li span{ min-width: 20px;}
+	.testimonial-content h2{ font-size: 20px;}
+	.facts-lsit li::before{ height: 140px; left: 20px; top: -10px; width: 100px;}
+	.facts-lsit li{ width: 50%; padding: 36px;}
+	.footer-social{ text-align: center;}
+	.footer-social p{ float: left; width: 100%; margin: 10px 0 0;}
+	.footer-social .social-icons.style-2{ float: none; display: inline-block;}
+	.servics-btns{ width: 100%;}
+	.btn-list.servics-btns .btn{ min-width: 100%; padding: 0 20px; font-size: 12px;}
+	.footer-content{ border: 0;}
+	.subscribe::before{ display: none;}
+	.subscribe{ padding: 30px; border: 0;}
+	.donate-type div{ width: 100%; margin: 0 0 10px;}
+	.donate-type .btn{ width: 100%; position: static;}
+	.select-amount{ width: 54px;}
+	.motivational-quotes{ margin: 0 0 30px;}
+	.quotes-section{ background-size: 100% 100%!important}
+
+	.about-quote h2{ font-size: 25px;}
+	.map-img{ display: none;}
+	.facts-lsit.style-2{ padding: 0;}
+	.facts-lsit.style-2 li{ width: 50%;}
+	.theme-pannels .panel-heading h5{ font-size: 10px;}
+	.theme-pannels .panel-heading h5 a{ padding: 20px;}
+	.theme-pannels > h3{ padding: 20px; font-size: 14px;}
+	.event-reviews.style-2{ padding: 0;}
+	.event-reviews-slider li blockquote{ font-size: 14px;} 
+
+	.aside{ width: 61%;}
+
+	.event-aside{ padding: 30px;}
+	.donate-prog{ width: 250px;}
+	.event-aside::before{ width: 100%; height: 100%;}
+
+	.speakers-grid{ margin: 15px 0;}
+	.tc-filterbale-nav ul li a{ padding: 0 17px;}
+
+	.xs-full-width-2{ width: 100%;}
+	.about-img{ display: none;}
+
+	.facts-lsit.style-3 ul li{ margin: 20px 0 0 20px !important; width: 45%;}
+	.fact-section-holder.style-3 .main-heading-holder p{ font-size: 12px;}
+	.news-img{ display: none;}
+	.newsletter > div > div > div{ margin: 10px 0;}
+ }
+
+@media (max-width: 639px) {
+	.r-full-width{ width: 100%!important;}
+	.left-side{ display: none;}
+	.right-side{ display: none;}
+	.logo-bar .logo{ border: 0;}
+	.logo-bar .logo a > img{ width: 45%;}
+	.year-quest span{ font-size: 14px;}
+	.year-quest span em{ font-size: 18px;}
+	.main-heading h2{ font-size: 20px;}
+	.about-video{ display: none;}
+	.services-column h5{ font-size: 11px;}
+	.btn-list li{ width: 45%;}
+	.detail-btm ul li{ font-size: 8px;}
+	.detail-btm ul li{ padding: 13px;}
+	.detail h2{ font-size: 14px;}
+	.event-detail .detail-content{ padding: 30px 20px;}
+	.event-map{ height: 490px;}
+	.election-date span{ padding: 0 10px; font-size: 9px;}
+	.facts-lsit li{ margin: 15px 0; padding: 28px;}
+	.team-column .overlay .detail h2{ font-size: 20px;}
+
+	.aside{ width: 90%;}
+	.s-videos-widget figure > img{ width: 100%;}
+	.campgain-trial figure > img{ width: 100%;}
+
+	.filter-options{ text-align: center;}
+	.filter-options .catagory-drop{ display: inline-block; float: none;}
+	.filter-options .change-view{ margin: 10px 0 0; display: inline-block; float: none;}
+	.slide-caption{ margin: 0; padding: 10px;}
+	.slide-caption h3{ font-size: 15px;}
+	.shares-option ul li{ margin: 0 0 0 20px;}
+	.pagination-holder ul li a{ height: 20px; line-height: 20px; width: 20px;}
+
+	.filter-options.style-2 .catagory-drop .arthor-img{ float: left; }
+	.filter-options.style-2 .catagory-drop > span{ float: left;}
+	.filter-options.style-2 .change-view{ float: left;}
+	.blog-detail > h2{ font-size: 23px;}
+
+	.xs-full-width-2{ width: 100%;}
+	.news-img img{ width: 100%;}
+
+	.change-view-list{ display: inline-block; float: none; margin: 20px 0 0;}
+	.event-post-list{ border: 0; margin: 0;}
+	.event-post-list > li::before{ display: none;}
+	.event-post-list > li{ padding: 0;}
+	.donate-prog{ width: 100%; margin: 0 0 20px;}
+	.event-post-list .btn{ float: left;}
+	.campgain-list ul li{ padding-left: 0;}
+	.campgain-list-holder.style-2 .campgain-list .detail h4{ font-size: 18px;}
+	.location-date ul li{ width: 100%; margin: 0 0 20px; border: 0;}
+
+	.inner-banner.event-detail .page-heading ul li{ margin: 0 0 10px 10px!important;}
+
+	.speakers-grid figure > img{ width: 100%;}
+	.s-recent-news.event-lineup ul li em{ left: -80px;}
+	.s-recent-news.event-lineup{ margin: 0 0 0 80px;}
+
+	.event-widget .facts-lsit{ padding: 0;}
+	.event-widget .facts-lsit li{ width: 100%;}
+
+	.nav-arrows{ height: 25.4%; line-height: 96px;}
+
+	.gallery .share-option ul{ margin: 20px 0 0;}
+
+	.gallary.style-2 figcaption ul li{ margin: 0 0 0 10px;}
+	.gallary.style-2 figcaption ul li i{ margin: 0 6px 0 0;}
+
+	.speechs-content h3{ font-size: 18px;}
+	.meta-post li{ margin: 0 0 10px;}
+	.speechs-content{ padding: 0 0 0 80px;}
+
+	.tc-filterbale-nav{ margin: 0 0 30px; padding: 30px 0 0 0;}
+	.tc-filterbale-nav ul{ margin: 0 0 0 -10px; box-shadow: none;}
+	.tc-filterbale-nav ul li{ margin: 0 0 10px 10px; border-radius: 50px;}
+	.tc-filterbale-nav ul li a{ font-size: 12px; border-radius: 50px;}
+
+	.campgain-list-holder{ position: static; padding: 0; margin: -280px 0 0;}
+	.campgain-list{  padding: 30px; padding-bottom: 0; margin: 0 0 30px;}
+	.campgain-list::before{ display: none;}
+	.campgain-list .date{ margin: 0 0 20px;}
+	.sticky-nav h2{ font-size: 20px; line-height: 10px;}
+
+}
+
+
+@media (max-width: 439px) {
+	.year-quest{ padding: 10px 0;}
+	.year-quest span{ font-size: 9px;}
+	.year-quest span em{ font-size: 12px; margin: 0 10px;}
+	.caption h1{ font-size: 8px; margin: 0;}
+	.banner-layer img{ margin: 10px 0 0;}
+	.xs-full-width{ width: 100%;}
+	.main-heading{ padding: 0 0 30px;}
+	.main-heading i{ margin: 0 0 10px!important;} 
+	.main-heading h2{ font-size: 14px; margin: 0;}
+	.main-heading p{ display: none;}
+	.btn-list.servics-btns{ width: 100%;}
+	.btn-list.servics-btns li{ width: 100%; margin: 0 0 10px;}
+	.btn-list.servics-btns li:last-child{ margin: 0;}
+	.slick-list{ margin: 0;}
+	.new-figure{ padding: 0 10px;}
+	.detail h2{ font-size: 10px;}
+	.event-detail .detail .detail-header{ padding: 10px;}
+	.event-detail .detail .detail-header h2{ font-size: 12px;}
+	.event-detail .detail .detail-header p{ font-size: 12px;}
+	.event-detail .detail-content span{ font-size: 12px;}
+	.detail-btm ul li span{ font-size: 12px;}
+	.detail-btm ul li{ padding: 10px;}
+	.detail-btm ul li:last-child i{ font-size: 20px;}
+	.gallery-figure{ margin: 10px!important;}
+	.gallery-figure.small{ margin: 10px!important;}
+	.gallery-figure > img{ width: 100%;}
+	.testimonial-content p{ display: none;}
+	.testimonial-content .btn.lg{ font-size: 11px; height: 50px; line-height: 50px; min-width: 170px; padding: 0;}
+	.facts-lsit li{ width: 100%;}
+	.subscribe h4{ font-size: 15px;}
+	.product-img .overlay .btn.lg{ font-size: 11px; height: 40px; line-height: 40px; min-width: 140px;}
+	.quotes-title h2{ font-size: 30px;}
+	#Joining-form .btn.lg{ min-width: 100%!important; padding: 0;}
+	.donate-type > .btn{ margin: 0;}
+	.donate-form .form-title h2{ font-size: 30px;}
+	.select-amount{ margin: 10px!important; width: 52px;}
+	.about-us{ padding: 20px;}
+	.about-us h2{ font-size: 30px;}
+	.about-us h4{ font-size: 12px;}
+	.about-us p:last-child{ display: none;}
+	.statement{ padding: 10px 0;}
+	.statement p{ font-size: 13px;}
+	.event-acounter ul li:first-child::before{ display: block;}
+	.event-acounter ul li{ margin: 0 0 10px; font-size: 20px; width: 100%; text-align: left;}
+	.event-acounter ul li:last-child{ margin: 0;}
+	.election-date{ display: none;}
+	.countdown{ margin: 0;}
+	.load-more .btn{ min-width: 100%; padding: 0;}
+	.caption.style-2{ display: none;}
+
+	.facts-lsit.style-2 li{ width: 100%;}
+	.inner-banner{ padding: 80px 0;}
+	.theme-pannels > h3{ padding: 20px 10px; font-size: 11px;}
+	.theme-pannels .panel-heading h5 a{ padding: 20px 10px;}
+	.theme-pannels .panel-heading h5 a{ padding-right: 40px;}
+	.theme-pannels .panel-body p{ font-size: 12px;}
+	.theme-pannels .panel-body{ padding: 10px;}
+	.event-reviews-slider li blockquote{ padding: 0 10px;}
+	.instagram-heading h5{ font-size: 12px;}
+
+	.meta-post li{ float: none;}
+	.blog .detail h2{ font-size: 17px;}
+	.shares-option ul li{ margin: 0 0 10px!important; float: none;}
+	.post-slider li{ margin: 0!important;}
+	.post-slider .slick-dots li{ margin: 0 5px!important;}
+	.pagination-holder ul li:first-child{ display: block;}
+	.pagination-holder ul li:last-child{ display: block;}
+	.pagination-holder ul li{ display: none;}
+	.share-options.style-2 ul{ margin: 0 0 0 -10px;}
+	.share-options.style-2 ul li{ margin: 0 0 10px 10px!important;}
+	.arthor-slider .slick-arrow.slick-next{ right: 0;}
+	.arthor-slider .slick-arrow.slick-prev{ left: 0;}
+
+	.s-related-post ul li{ padding: 0 0 10px 110px;}
+	.s-related-post ul li .detail{ padding: 0;}
+	.s-related-post ul li .detail h6{ font-size: 11px;}
+	.s-related-post ul li .detail span{ font-size: 10px;}
+	.online-poll .btn-list li{ margin: 0 20px 0 0;}
+	.online-poll .btn-list li .btn{ padding: 0;}
+	.s-videos-widget h6{ font-size: 10px;}	
+
+	.blog.style-3 .detail h3{ font-size: 14px;}
+	.blog.style-3 .shares-option ul li{ float: none; margin: 0 0 10px;}
+	.blog.style-3 .shares-option .read-more{ float: left;}
+	.saerch-widget .form-control{ font-size: 12px;}
+
+	.online-poll h5{ font-size: 14px;}
+	.google-progress{ text-align: left;}
+
+	.blog-article blockquote{ font-size: 16px;}
+	.related-blog-slider li{ margin: 0!important;}
+	.sub-comment{ margin: 0 0 0 20px;}
+
+	.tags-list ul{ margin: 0 0 0 -10px;}
+	.tags-list ul li{ margin: 0 0 10px 10px!important;}
+
+	.speakers-list ul li{ margin: 0 10px 10px 0;}
+	.speakers-list ul li:first-child{ width: 100%;}
+	.campgain-list .date{ font-size: 28px; line-height: 31px; margin: 0 10px 0 0;}
+	.campgain-list .detail span{ font-size: 11px;}
+	.campgain-list-holder.style-2 .campgain-list .detail h4{ font-size: 11px;}
+	.campgain-list-holder.style-2 .donation-target.m-left{ margin-right: 0;}
+
+	.s-recent-news.event-lineup ul li{ padding: 0 0 0 20px;}
+	.page-heading h2{ font-size: 30px;}
+ 
+	.nav-arrows{ line-height: 70px;}
+
+	.single-team-detail{ padding: 20px;}
+	.single-team-detail h2{ font-size: 18px;}
+	.team-contact ul li{ font-size: 13px;}
+	.team-contact { text-align: center;}
+	.team-contact .msg-btn{ float: none; display: inline-block; margin: 10px 0 0;}
+
+	.campgain-list-holder{ position: static; padding: 0; margin: -200px 0 0;}
+	.campgain-list .date{ margin: 0 0 20px;}
+	.campgain-list-holder .btn.lg{ min-width: 100%; padding: 0;}
+	.event-acounter .countdown{ margin: 0;}
+	.campgain-list-holder.style-2 .donation-target.m-left{ margin-left: 20px;}	
+
+	.facts-lsit.style-3 ul li{ margin: 20px 0 0 0 !important; width: 100%;}
+	.main-heading h2{ line-height: 44px;}
+	.supporter-list li{ margin: 6px 0 6px 13.8px;}
+
+	.hidden-480{ display: none;}
+}
+
+@media (max-width: 320px) {
+	.supporter-list{ margin: 0 0 0 -7.5px;}
+	.supporter-list li{ margin: 6px 0 6px -0.2px;}
+}
