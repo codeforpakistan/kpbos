@@ -117,7 +117,7 @@
                                 <form action="{{ url('achievements',$achievement->id) }}" method="post">
                                     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                                     <input type="hidden" name="_method" value="DELETE">
-                                    <button type="submit" name="add_btn" value="Delete" class="btn btn-danger btn-sm" ><i class="glyphicon glyphicon-remove"></i>Delete</button>
+                                    <button type="submit" onclick="return confirm('Are you sure to want to delete this?');" name="add_btn" value="Delete" class="btn btn-danger btn-sm" ><i class="glyphicon glyphicon-remove"></i>Delete</button>
 
                                 </form>
                             </div>

@@ -51,15 +51,15 @@ class subcategoryController extends Controller
     public function store(Request $request)
     {
         //
-        $file=$request->file('file');
+        // $file=$request->file('file');
 
-        $filename=$file->getClientOriginalName();
-        $file->move('public/uploads/sectors/',$filename);
+        // $filename=$file->getClientOriginalName();
+        // $file->move('public/uploads/sectors/',$filename);
 
       $data=array(
           'category_id'=>$request['category_id'],
           'name'=>$request['name'],
-           'file_name'=>$filename
+           // 'file_name'=>$filename
       );
         DB::Table('sub_categories')->insert($data);
         return back();

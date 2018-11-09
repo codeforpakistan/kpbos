@@ -30,8 +30,8 @@
                     <label>Department Name</label>
                     <input type="text" name="name" class="form-control" required="required">
 
-                    <label>Detail File of Sector</label>
-                    <input type="file" name="file" class="form-control">
+                    <!-- <label>Detail File of Sector</label> -->
+                    <!-- <input type="file" name="file" class="form-control"> -->
 
 
 
