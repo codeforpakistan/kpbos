@@ -29,7 +29,6 @@ class testController extends Controller
             ->leftjoin('categories','categories.id','=','sub_categories.category_id')
             ->where('category_id',$id)
             ->get();
-
         return $subcategories;
     }
     public function allpublications(){
