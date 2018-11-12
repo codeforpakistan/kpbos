@@ -271,11 +271,18 @@
             var description='';
             $.each(response,function(key,value){
                 console.log(response);
-              $el.append('<a href="{{ url('department') }}/'+value.id+ '"> <li ><i class="glyphicon glyphicon-download" style="color: #008000"></i>  '+value.name+'</li>')
-              cat_name=value.cat_name;
+                if(value.name==null){
+
+                }
+                else{
+                    $el.append('<a href="{{ url('department') }}/'+value.id+ '"> <li ><i class="glyphicon glyphicon-download" style="color: #008000"></i>  '+value.name+'</li>')
+
+                }
+               cat_name=value.cat_name;
                description=value.description;
             });
-            $('#sector_description').text(description);
+
+            $('#sector_description').html(description);
             $('#title').text(cat_name);
             $('#myModal').modal('show');
         });

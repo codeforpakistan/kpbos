@@ -23,12 +23,29 @@ class testController extends Controller
        return view('welcome',array('categories'=>$categories,'yearly_publications'=>$yearlypublications,'monthly_publications'=>$monthlypublications,'about_us'=>$about_us));
     }
 
-    public function getsubcategories($id){
+     public function getsubcategories($id){
         $subcategories= DB::Table('sub_categories')
             ->select('sub_categories.*','categories.name as cat_name','categories.description as description')
             ->leftjoin('categories','categories.id','=','sub_categories.category_id')
             ->where('category_id',$id)
             ->get();
+        if(count($subcategories)>0){
+//            echo "<pre>";
+//            print_r($subcategories);
+//            exit();
+            return $subcategories;
+        }
+        else{
+            $subcategories= DB::Table('categories')
+                 ->select('categories.name as khan','categories.description as description')
+                ->where('id',$id)
+                ->get();
+//            echo "<pre>";
+//            print_r($subcategories);
+//            exit();
+            return $subcategories;
+        }
+
         return $subcategories;
     }
     public function allpublications(){
