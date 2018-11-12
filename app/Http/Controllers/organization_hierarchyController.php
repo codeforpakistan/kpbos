@@ -102,6 +102,8 @@ class organization_hierarchyController extends Controller
     public function destroy($id)
     {
         //
+        DB::Table('members')->where('id',$id)->delete();
+        return back();
     }
     public function edit_member(Request $request){
         $file=$request->file('pic');

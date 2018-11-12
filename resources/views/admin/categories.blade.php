@@ -116,10 +116,10 @@
                         <td>{{ $category->name }}</td>
                         <td>{{ $category->description }}</td>
                         <td>
-                            <div class="col-md-1">
+                            <div class="col-md-2">
                                 <button class="edit btn btn-primary btn-sm" value="{{ $category->id }}"><i class="glyphicon glyphicon-pencil"></i>Edit</button>
                             </div>
-                            <div class="col-md-1" style="margin-left: 13px;">
+                            <div class="col-md-2" style="margin-left: 13px;">
                                 <form action="{{ url('categories',$category->id) }}" method="post">
                                     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                                     <input type="hidden" name="_method" value="DELETE">
