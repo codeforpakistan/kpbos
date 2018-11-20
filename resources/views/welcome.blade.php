@@ -11,6 +11,79 @@
 
     }
 
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+    .search {
+        width: 100%;
+        position: relative
+    }
+
+    .searchTerm {
+        float: left;
+        width: 100%;
+        border: 3px solid #00B4CC;
+        padding: 5px;
+        height: 20px;
+        border-radius: 5px;
+        outline: none;
+        color: #9DBFAF;
+    }
+
+    .searchTerm:focus{
+        color: #00B4CC;
+    }
+
+    .searchButton {
+        position: absolute;
+
+        width: 40px;
+        height: 36px;
+        border: 1px solid #00B4CC;
+        background: #00B4CC;
+        text-align: center;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    /*Resize the wrap to see the search bar change!*/
+    .wrap{
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @media (max-width: 768px) {
+        .btn {
+            font-size:11px;
+
+        }
+    }
+
+    @media (min-width: 768px) {
+        .btn {
+            font-size:12px;
+
+        }
+    }
+
+    @media (min-width: 992px) {
+        .btn {
+            font-size:14px;
+            padding:0px 0px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .btn {
+            padding:0px 0px;
+            font-size:18px;
+        }
+    }
+
 </style>
 
 
@@ -37,16 +110,27 @@
                 <div class="caption h-white p-white">
 
 <!--                    <img class="signature" src="assets/images/signature.png" alt="">-->
-                    <form action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">
+<!--                    <form action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">-->
+<!--                        <input type="hidden" name="_token" value="--><?php //echo csrf_token(); ?><!--">-->
+<!--                        <div class="input-group" style="background-color: white ">-->
+<!--                            <input name="keyword" value="" style=" color: #000000;" class="form-control" type="text" placeholder="Search your desired dataset">-->
+<!--                       <span class="input-group-btn">-->
+<!--                       <button  style="background:#3c8a50" class="btn btn-default" type="submit" id="addressSearch">-->
+<!--                           <span class="icon-search"></span>-->
+<!--                       </button>-->
+<!--                    </span>-->
+<!--                        </div>-->
+<!--                    </form>-->
+                    <form action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">-->
                         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                        <div class="input-group" style="background-color: white ">
-                            <input name="keyword" value="" style=" color: #000000;" class="form-control" type="text" placeholder="Search your desired dataset">
-                    <span class="input-group-btn">
-                       <button style="background:#3c8a50" class="btn btn-default" type="submit" id="addressSearch">
-                           <span class="icon-search"></span>
-                       </button>
-                    </span>
+                    <div class="wrap">
+                        <div class="search">
+                            <input  name="keyword" style="width: 100%; background-color: white; color: #000000; font-weight: bold" type="text" class="searchTerm" placeholder="Search your desired dataset">
+                            <button style="height: 50px; background:#3c8a50; width: 50px" type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
                         </div>
+                    </div>
                     </form>
                 </div>
             </div>
@@ -282,7 +366,7 @@
                description=value.description;
             });
 
-            $('#sector_description').html(description);
+            $('#sector_description').text(description);
             $('#title').text(cat_name);
             $('#myModal').modal('show');
         });
