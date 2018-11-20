@@ -205,7 +205,7 @@
 
         <div class="footer-left">
 
-            <a href="{{ url('/') }}"><img id="loading" src="{{ URL::asset('assets/images/logo.png') }}" src="" alt="" style="height: 80px;"></a>
+            <a href="{{ url('/') }}"><img id="loading" src="{{ URL::asset('assets/images/logo.png') }}" src="" alt="" style="height: 80px;"><span style="color: white">KPBOS</span></a>
 
             <p class="footer-links">
                 <a href="{{ url('/') }}">Home</a>
