@@ -23,7 +23,7 @@ class testController extends Controller
        return view('welcome',array('categories'=>$categories,'yearly_publications'=>$yearlypublications,'monthly_publications'=>$monthlypublications,'about_us'=>$about_us));
     }
 
-     public function getsubcategories($id){
+    public function getsubcategories($id){
         $subcategories= DB::Table('sub_categories')
             ->select('sub_categories.*','categories.name as cat_name','categories.description as description')
             ->leftjoin('categories','categories.id','=','sub_categories.category_id')
@@ -51,22 +51,33 @@ class testController extends Controller
     public function allpublications(){
       $allpublications= DB::Table('publication_uploads')
           ->paginate(8);
+
       return view('partials.publications',array('allpublications'=>$allpublications));
     }
 
     public function publicationbydate($year){
         $allpublications= DB::Table('publication_uploads')->where('period',$year)->paginate(8);
+
         return view('partials.publications',array('allpublications'=>$allpublications));
     }
     public function allpublication($id){
         $allpublications= DB::Table('publication_uploads')->where('publication_id',$id)->paginate(8);
 
-        return view('partials.publications',array('allpublications'=>$allpublications,'id'=>$id));
+         $publications=DB::Table('publications')->where('id',$id)->get();
+         if(count($publications)>0){
+             $name=$publications[0]->name;
+         }
+
+        return view('partials.publications',array('allpublications'=>$allpublications,'id'=>$id,'name'=>$name));
     }
     public function publicationbydat($year,$id){
         $allpublications= DB::Table('publication_uploads')->where('period',$year)->where('publication_id',$id)->paginate(5);
 
-        return view('partials.publications',array('allpublications'=>$allpublications,'id'=>$id));
+        $publications=DB::Table('publications')->where('id',$id)->get();
+        if(count($publications)>0){
+            $name=$publications[0]->name;
+        }
+        return view('partials.publications',array('allpublications'=>$allpublications,'id'=>$id,'name'=>$name));
     }
 
     public function main_menu($id){
@@ -188,7 +199,7 @@ class testController extends Controller
     }
 
     public function all_images($id){
-       $images=DB::Table('media')->where('id',1)->get();
+       $images=DB::Table('media')->where('id',$id)->get();
        $event_name=$images[0]->event_name;
        $images= DB::table('media')->where('file_type','image')->where('event_name',$event_name)->get();
        return view('partials.all_images',array('images'=>$images));

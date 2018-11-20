@@ -178,9 +178,10 @@
 
 <!--                <span>Khyber Pakhtunkhwa  Bureau Of Statistics</span>-->
                 <br><br>
-                <marquee scrollamount="10" onmouseover="this.stop();" onmouseout="this.start();">
+                <marquee scrollamount="10"  onmouseover="this.stop();" onmouseout="this.start();">
                 @foreach($allnews as $news)
-                    <span style="color: white">  {{ $news->description }} </span>
+
+                   <span style="color: white" onclick="window.location='singlenews'+'/'+<?php echo $news->id ?>">  {{ $news->description }} </span>
 
                 @endforeach
                 </marquee>
@@ -232,7 +233,7 @@
 
             <div>
                 <i class="fa fa-phone"></i>
-                <p>+92 91 5261332/p>
+                <p>+92 91 5261332</p>
             </div>
 
             <div>

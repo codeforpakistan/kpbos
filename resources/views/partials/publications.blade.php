@@ -61,7 +61,14 @@
 
 
 <div style="margin-left: 2%; margin-right: 2%;min-height: 500px;">
-<h1 class="box-title" align="center" style="margin-top: 2%; ">Publications</h1>
+<h1 class="box-title" align="center" style="margin-top: 2%; ">
+   @if(isset($name))
+   {{  $name }} Publications
+    @else
+    Publications
+    @endif
+
+</h1>
     @if(isset($id))
     <input type="hidden" name="id" value="{{ $id }}" id="id">
     @endif
