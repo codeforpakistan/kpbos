@@ -33,8 +33,8 @@
          $count=$count+1;
         }
        ?>
-        <h1 align="center" style="font-size: 35px;">{{ $count }} Results Found</h1>
-        <div class="card" style="margin:2% auto;">
+        <h1 width:100%;font-size: 35px;text-align:center; margin:3%;>{{ $count }} Results Found</h1>
+        <div class="card" style="margin:0 auto;">
             <?php
 
             $result2 = $response_data->result;
@@ -46,23 +46,23 @@
                      ?>
 
                      @if($value2->format=='XLSX')
-                     <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="XLSX">Xls</a></span>
+                     <span style="font-size: 20px;margin-left:2%"><a href="{{ $value2->url }}" class="label" data-format="XLSX">Xls</a></span>
                      @elseif($value2->format=='DOCX')
-                     <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="DOCX">DOCX</a></span>
+                     <span style="font-size: 20px;margin-left:2%"><a href="{{ $value2->url }}" class="label" data-format="DOCX">DOCX</a></span>
                     @elseif($value2->format=='PDF')
-                    <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="PDF">PDF</a></span>
+                    <span style="font-size: 20px;margin-left:2%"><a href="{{ $value2->url }}" class="label" data-format="PDF">PDF</a></span>
                     @elseif($value2->format=='CSV')
-                    <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="CSV">CSV</a></span>
+                    <span style="font-size: 20px;margin-left:2%"><a href="{{ $value2->url }}" class="label" data-format="CSV">CSV</a></span>
                     @elseif($value2->format=='JSON')
-                    <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="JSON">JSON</a></span>
+                    <span style="font-size: 20px;margin-left:2%"><a href="{{ $value2->url }}" class="label" data-format="JSON">JSON</a></span>
                     @elseif($value2->format=='ODS')
-                    <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="DOCX">ODS</a></span>
+                    <span style="font-size: 20px;margin-left:2%"><a href="{{ $value2->url }}" class="label" data-format="DOCX">ODS</a></span>
                      @endif
 
 
                    <?php
                 }
-                ?>  <hr><?php
+                ?> <?php
             }
             ?>
     </div>
