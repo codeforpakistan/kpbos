@@ -15,7 +15,7 @@
 
 </style>
 @section('middle')
-<h1 align="center" style="font-size: 35px;">Department: {{ $sub_category }} (<a href="{{ url('public/uploads/sectors/') }}/{{$filename}}" class="btn btn-sm"  style="height: 40px; width: 50" download ><i class="fa fa-download"></i> Download File</a>)</h1>
+<h1 align="center" style="font-size: 35px;">Department: {{ $sub_category }} <a href="{{ url('public/uploads/sectors/') }}/{{$filename}}" class="label btn-sm" data-format="PDF" style="font-size: 59%; margin-bottom: 20px;" download ><i class="fa fa-download"></i> PDF</a></h1>
 
 
 <div class="container">
@@ -47,6 +47,11 @@
                     <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="PDF">PDF</a></span>
                     @elseif($value2->format=='ODS')
                     <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="DOCX">ODS</a></span>
+                    @elseif($value2->format=='csv')
+                    <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="DOCX">ODS</a></span>
+                    @elseif($value2->format=='JSON')
+                    <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="PDF">ODS</a></span>
+
                     @endif
 
 
