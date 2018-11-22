@@ -33,7 +33,7 @@
          $count=$count+1;
         }
        ?>
-        <h1 width:100%;font-size: 35px;text-align:center; margin:3%;>{{ $count }} Results Found</h1>
+        <h1 style="width:100%;font-size: 35px;text-align:center; margin:3%;">{{ $count }} Results Found</h1>
         <div class="card" style="margin:0 auto;">
             <?php
 
