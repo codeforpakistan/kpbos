@@ -1,4 +1,8 @@
 @extends('includes.head')
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
 <style>
     .label[data-format=CSV], .label[data-format*=csv] {
         background-color: #dfb100;
