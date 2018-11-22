@@ -1,7 +1,10 @@
 @extends('includes.head')
 <style>
-    .label[data-format=csv], .label[data-format*=csv] {
+    .label[data-format=CSV], .label[data-format*=csv] {
         background-color: #dfb100;
+    }
+    .label[data-format=JSON], .label[data-format*=json] {
+        background-color: orange;
     }
     .label[data-format=XLSX], .label[data-format*=XLSX] {
         background-color: #dfb100;
@@ -32,7 +35,7 @@
 
             $result2 = $response_data->result;
             foreach ($result2->results as $key => $value){
-               ?> <h4 style=" text-transform: capitalize;">{{$value->title}}</h4>
+               ?> <h4 style=" text-transform: capitalize;"><a href="http://13.76.133.211/dataset/{{$value->name}}" target="_blank">{{$value->title}}</a></h4>
                 <p>{{$value->notes}}</p>
                 <?php
                 foreach ($value->resources as $key2 => $value2) {
@@ -44,6 +47,10 @@
                      <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="DOCX">DOCX</a></span>
                     @elseif($value2->format=='PDF')
                     <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="PDF">PDF</a></span>
+                    @elseif($value2->format=='CSV')
+                    <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="CSV">CSV</a></span>
+                    @elseif($value2->format=='JSON')
+                    <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="JSON">JSON</a></span>
                     @elseif($value2->format=='ODS')
                     <span style="font-size: 20px"><a href="{{ $value2->url }}" class="label" data-format="DOCX">ODS</a></span>
                      @endif
