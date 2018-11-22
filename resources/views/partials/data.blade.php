@@ -30,7 +30,7 @@
         }
        ?>
         <h1 align="center" style="font-size: 35px;">{{ $count }} Results Found</h1>
-        <div class="col-md-12" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="card w-75" style="margin:0 auto;">
             <?php
 
             $result2 = $response_data->result;
