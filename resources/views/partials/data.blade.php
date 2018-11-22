@@ -34,13 +34,13 @@
         }
        ?>
         <h1 align="center" style="font-size: 35px;">{{ $count }} Results Found</h1>
-        <div class="card w-75" style="margin:0 auto;">
+        <div class="card" style="margin:2% auto;">
             <?php
 
             $result2 = $response_data->result;
             foreach ($result2->results as $key => $value){
-               ?> <h4 style=" text-transform: capitalize;"><a href="http://13.76.133.211/dataset/{{$value->name}}" target="_blank">{{$value->title}}</a></h4>
-                <p>{{$value->notes}}</p>
+               ?> <h4 style=" text-transform: capitalize; margin:2%;"><a href="http://13.76.133.211/dataset/{{$value->name}}" target="_blank">{{$value->title}}</a></h4>
+                <p style="margin-left:2%">{{$value->notes}}</p>
                 <?php
                 foreach ($value->resources as $key2 => $value2) {
                      ?>
