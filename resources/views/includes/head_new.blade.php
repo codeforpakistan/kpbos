@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--    <link  href="" rel="shortcut icon" type="image/png">-->
+    <!--    <link  href="" rel="shortcut icon" type="image/png">-->
     <title>KPBOS</title>
 
 
@@ -22,9 +22,9 @@
     <link href="{{ URL::asset('assets/css/responsive.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/transition.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/footer.css') }}" href="" rel="stylesheet">
-<!--    <link href="{{ URL::asset('assets/css/round-about.css') }}" href="" rel="stylesheet">-->
+    <!--    <link href="{{ URL::asset('assets/css/round-about.css') }}" href="" rel="stylesheet">-->
 
-<!--    <link href="{{ URL::asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" href="" rel="stylesheet">-->
+    <!--    <link href="{{ URL::asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" href="" rel="stylesheet">-->
 
     <!-- FontsOnline -->
     <link href="../../../fonts.googleapis.com/cssfa63.css?family=Varela+Round" rel="stylesheet">
@@ -68,46 +68,46 @@
 <div class="wrapper push-wrapper">
 
 
-<!-- Forms -->
+    <!-- Forms -->
 
-<!-- Header -->
-<header class="header">
+    <!-- Header -->
+    <header class="header">
 
-    <!-- Logo Bar -->
-    <div class="logo-bar">
+        <!-- Logo Bar -->
+        <div class="logo-bar">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-1 col-sm-2 col-xs-2">
-                    <div>
-                        <a href="{{ url('/') }}"><img id="loading" src="{{ URL::asset('assets/images/logo.png') }}" src="" alt="" style="height: 80px;"></a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-1 col-sm-2 col-xs-2">
+                        <div>
+                            <a href="{{ url('/') }}"><img id="loading" src="{{ URL::asset('assets/images/logo.png') }}" src="" alt="" style="height: 80px;"></a>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-9  col-sm-5 col-xs-5">
+                        <div class="left-side p-m-0">
+                            <p style="font-weight: bold; font-family: Arial,Helvetica Neue,Helvetica,sans-serif; color: #000000; font-size: 18px; "><span>Bureau Of Statistics Planning & Development Department<br> Government of KP</span></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-5 col-xs-5" style="margin-top: 30px;">
+                        <div>
+
+                            <a style="display: inline" target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER"><img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter_30x30.png" border=0></a>
+                            <a style="display: inline" target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER"><img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter-b_30x30.png" border=0></a>
+                            <a style="display: inline" target="_blank" title="find us on Facebook" href="http://www.facebook.com/PLACEHOLDER"><img alt="follow me on facebook" src="//login.create.net/images/icons/user/facebook_30x30.png" border=0></a>
+                        </div>
                     </div>
 
                 </div>
-                <div class="col-lg-9  col-sm-5 col-xs-5">
-                    <div class="left-side p-m-0">
-                   <p style="font-weight: bold; font-family: Arial,Helvetica Neue,Helvetica,sans-serif; color: #000000; font-size: 18px; "><span>Bureau Of Statistics Planning & Development Department<br> Government of KP</span></p>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-sm-5 col-xs-5" style="margin-top: 30px;">
-                    <div>
-
-                        <a style="display: inline" target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER"><img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter_30x30.png" border=0></a>
-                        <a style="display: inline" target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER"><img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter-b_30x30.png" border=0></a>
-                        <a style="display: inline" target="_blank" title="find us on Facebook" href="http://www.facebook.com/PLACEHOLDER"><img alt="follow me on facebook" src="//login.create.net/images/icons/user/facebook_30x30.png" border=0></a>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </div>
-    <!-- Logo Bar -->
+        <!-- Logo Bar -->
 
-    <!-- Nav Holder -->
-    <nav class="nav-holder">
+        <!-- Nav Holder -->
+        <nav class="nav-holder">
 
-        <!-- Nav Nd Caption -->
+            <!-- Nav Nd Caption -->
 
 
             <!-- Nav Lsit -->
@@ -127,11 +127,11 @@
                         </ul>
                         @endif
 
-<!--                        <ul>-->
-<!--                            <li><a href="index-2.html">Home 1</a></li>-->
-<!--                            <li><a href="index-3.html">Home 2</a></li>-->
-<!--                            <li><a href="index-4.html">Home 3</a></li>-->
-<!--                        </ul>-->
+                        <!--                        <ul>-->
+                        <!--                            <li><a href="index-2.html">Home 1</a></li>-->
+                        <!--                            <li><a href="index-3.html">Home 2</a></li>-->
+                        <!--                            <li><a href="index-4.html">Home 3</a></li>-->
+                        <!--                        </ul>-->
                     </li>
                     @endforeach
                     <li><a href="{{ url('#') }}">About Us</a>
@@ -151,20 +151,20 @@
 
 
                     <li><a href="{{ url('#') }}">Media</a>
-                    <ul>
-                        <li><a href="{{ url('images')}}">Images</a></li>
-                        <li><a href="{{ url('videos')}}" >Videos</a></li>
-                    </ul>
+                        <ul>
+                            <li><a href="{{ url('images')}}">Images</a></li>
+                            <li><a href="{{ url('videos')}}" >Videos</a></li>
+                        </ul>
 
                     </li>
 
 
                     <li><a href="{{ url('allpublications') }}">Publications</a>
-                    <ul>
-                        @foreach($publication_names as $publication_name)
-                        <li><a href="{{ url('allpublication') }}/{{ $publication_name->id }}">{{ $publication_name->name}}</a></li>
-                        @endforeach
-                    </ul>
+                        <ul>
+                            @foreach($publication_names as $publication_name)
+                            <li><a href="{{ url('allpublication') }}/{{ $publication_name->id }}">{{ $publication_name->name}}</a></li>
+                            @endforeach
+                        </ul>
                     </li>
                     <li><a href="{{ url('allnews') }}">News And Event</a></li>
 
@@ -176,15 +176,46 @@
 
             <div>
 
-<!--                <span>Khyber Pakhtunkhwa  Bureau Of Statistics</span>-->
+                <!--                <span>Khyber Pakhtunkhwa  Bureau Of Statistics</span>-->
                 <br><br>
-<!--                <marquee scrollamount="10"  onmouseover="this.stop();" onmouseout="this.start();">-->
-<!--                @foreach($allnews as $news)-->
-<!---->
-<!--                   <span style="color: white" onclick="window.location='singlenews'+'/'+--><?php //echo $news->id ?><!--">  {{ $news->description }} </span>-->
-<!---->
-<!--                @endforeach-->
-<!--                </marquee>-->
+                <div class="container">
+                <h2 align="center" style="color: #000000">About Khyber Pakhtunkhwa Bureau of Statistics </h2>
+                <p class="font-cinzel" style=" letter-spacing: normal; margin: 0 0 100px;line-height: 22px;font-size: 19px;color: #000000;font-family: "roboto", sans-serif; text-align: justify ">
+                @foreach($about_us as $about)
+                {{ $about->description }}
+                @endforeach
+                </p>
+
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 65px;">
+                    <div class="caption h-white p-white">
+
+                        <!--                    <img class="signature" src="assets/images/signature.png" alt="">-->
+                        <!--                    <form action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">-->
+                        <!--                        <input type="hidden" name="_token" value="--><?php //echo csrf_token(); ?><!--">-->
+                        <!--                        <div class="input-group" style="background-color: white ">-->
+                        <!--                            <input name="keyword" value="" style=" color: #000000;" class="form-control" type="text" placeholder="Search your desired dataset">-->
+                        <!--                       <span class="input-group-btn">-->
+                        <!--                       <button  style="background:#3c8a50" class="btn btn-default" type="submit" id="addressSearch">-->
+                        <!--                           <span class="icon-search"></span>-->
+                        <!--                       </button>-->
+                        <!--                    </span>-->
+                        <!--                        </div>-->
+                        <!--                    </form>-->
+                        <form action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">
+                            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                            <div class="wrap">
+                                <div class="search">
+                                    <input  name="keyword" style="width: 100%; background-color: white; color: #000000; font-weight: bold" type="text" class="searchTerm" placeholder="Search your desired dataset">
+                                    <button style="height: 50px; background:#3c8a50; width: 50px" type="submit" class="searchButton">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
 
 
 
@@ -192,15 +223,15 @@
             <!-- Year Quest -->
 
 
-        <!-- Nav Nd Caption -->
+            <!-- Nav Nd Caption -->
 
-    </nav>
-    <!-- Nav Holder -->
+        </nav>
+        <!-- Nav Holder -->
 
-</header>
-<!-- Header -->
-@yield('middle')
-<!-- Footer -->
+    </header>
+    <!-- Header -->
+    @yield('middle')
+    <!-- Footer -->
     <footer class="footer-distributed">
 
         <div class="footer-left">
@@ -262,7 +293,7 @@
         </div>
 
     </footer>
-<!-- Footer -->
+    <!-- Footer -->
 
 </div>
 <!-- Wrapper -->

@@ -51,14 +51,14 @@ class testController extends Controller
     public function allpublications(){
       $allpublications= DB::Table('publication_uploads')
           ->paginate(8);
-
-      return view('partials.publications',array('allpublications'=>$allpublications));
+       $year="";
+      return view('partials.publications',array('allpublications'=>$allpublications,'year'=>$year));
     }
 
     public function publicationbydate($year){
         $allpublications= DB::Table('publication_uploads')->where('period',$year)->paginate(8);
 
-        return view('partials.publications',array('allpublications'=>$allpublications));
+        return view('partials.publications',array('allpublications'=>$allpublications,'year'=>$year));
     }
     public function allpublication($id){
         $allpublications= DB::Table('publication_uploads')->where('publication_id',$id)->paginate(8);
@@ -67,8 +67,8 @@ class testController extends Controller
          if(count($publications)>0){
              $name=$publications[0]->name;
          }
-
-        return view('partials.publications',array('allpublications'=>$allpublications,'id'=>$id,'name'=>$name));
+        $year="";
+        return view('partials.publications',array('allpublications'=>$allpublications,'id'=>$id,'name'=>$name,'year'=>$year));
     }
     public function publicationbydat($year,$id){
         $allpublications= DB::Table('publication_uploads')->where('period',$year)->where('publication_id',$id)->paginate(5);
@@ -77,7 +77,7 @@ class testController extends Controller
         if(count($publications)>0){
             $name=$publications[0]->name;
         }
-        return view('partials.publications',array('allpublications'=>$allpublications,'id'=>$id,'name'=>$name));
+        return view('partials.publications',array('allpublications'=>$allpublications,'id'=>$id,'name'=>$name,'year'=>$year));
     }
 
     public function main_menu($id){
