@@ -63,7 +63,7 @@
 <div style="margin-left: 2%; margin-right: 2%;min-height: 500px;">
 <h1 class="box-title" align="center" style="margin-top: 2%; ">
    @if(isset($name))
-   {{  $name }} Publications
+
     @else
     Publications
     @endif
@@ -72,17 +72,17 @@
     @if(isset($id))
     <input type="hidden" name="id" value="{{ $id }}" id="id">
     @endif
-
+    <span style="font-weight: bold; float: right; font-size: 17px; margin-right: 10%;">Search By Year</span><br><br>
     <select id="period" style="width: 20%; color: #000000;float: right" class="form-control" name="period">
-        <option value="2010">2010</option>
-        <option value="2011">2011</option>
-        <option value="2012">2012</option>
-        <option value="2013">2013</option>
-        <option value="2014">2014</option>
-        <option value="2015">2015</option>
-        <option value="2016">2016</option>
-        <option value="2017">2017</option>
-        <option value="2018">2018</option>
+        <option value="2010"<?=$year == '2010' ? ' selected="selected"' : '';?>>2010</option>
+        <option value="2011"<?=$year == '2011' ? ' selected="selected"' : '';?>>2011</option>
+        <option value="2012"<?=$year == '2012' ? ' selected="selected"' : '';?>>2012</option>
+        <option value="2013"<?=$year == '2013' ? ' selected="selected"' : '';?>>2013</option>
+        <option value="2014"<?=$year == '2014' ? ' selected="selected"' : '';?>>2014</option>
+        <option value="2015"<?=$year == '2015' ? ' selected="selected"' : '';?>>2015</option>
+        <option value="2016"<?=$year == '2016' ? ' selected="selected"' : '';?>>2016</option>
+        <option value="2017"<?=$year == '2017' ? ' selected="selected"' : '';?>>2017</option>
+        <option value="2018"<?=$year == '2018' ? ' selected="selected"' : '';?>>2018</option>
     </select><br>
 
 

@@ -19,8 +19,9 @@
              @foreach($images as $image)
              <a href="{{ url('all_images') }}/{{ $image->id }}">
              <div class="col-md-3 zoom" >
-                 <img style="width: 200px; height: 200px;" src="{{ URL::asset('public/uploads/media/') }}/{{ $image->file_name }}"><br>
-                 <span style="font-weight: bold; margin-left: 20%; font-size: 18px; text-transform:uppercase" align="center">{{ $image->event_name }}</span>
+                 <img style="width: 100%; height: 200px;" src="{{ URL::asset('public/uploads/media/') }}/{{ $image->file_name }}"><br>
+                 <div style="font-weight: bold;  font-size: 18px; text-transform:uppercase" align="center">{{ $image->event_name }}</div>
+<!--                 <span style="font-weight: bold; margin-left: 20%; font-size: 18px; text-transform:uppercase" align="center">{{ $image->event_name }}</span>-->
              </div>
              </a>
              @endforeach

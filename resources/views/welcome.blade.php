@@ -1,4 +1,4 @@
-@extends('includes.head')
+@extends('includes.head_new')
 @section('middle')
 <style>
     .zoom:hover h5{
@@ -7,6 +7,7 @@
         -ms-transform: scale(1.02); /* IE 9 */
         -webkit-transform: scale(1.02); /* Safari 3-8 */
         transform: scale(1.02);
+
 
 
     }
@@ -89,54 +90,7 @@
 
 <!-- Header -->
 
-<!-- Banner -->
-<div class="banner" style="height: 500px; background-color: lightcyan">
-<!--    <img   src="assets/images/banner/banner (1).jpg" alt="" >-->
-    <img   src="assets/images/banner/banner-233.jpg" alt="" style="height: 500px;" >
 
-    <div class="banner-overay">
-        <div class="container">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="caption h-white p-white">
-                    <h2 align="center" style="color: #000000">About Khyber Pakhtunkhwa Bureau of Statistics </h2>
-                    <p class="font-cinzel" style="color: #000000;font-family: "roboto", sans-serif; text-align: justify ">
-                        @foreach($about_us as $about)
-                        {{ $about->description }}
-                        @endforeach
-                    </p>
-                 </div>
-             </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="caption h-white p-white">
-
-<!--                    <img class="signature" src="assets/images/signature.png" alt="">-->
-<!--                    <form action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">-->
-<!--                        <input type="hidden" name="_token" value="--><?php //echo csrf_token(); ?><!--">-->
-<!--                        <div class="input-group" style="background-color: white ">-->
-<!--                            <input name="keyword" value="" style=" color: #000000;" class="form-control" type="text" placeholder="Search your desired dataset">-->
-<!--                       <span class="input-group-btn">-->
-<!--                       <button  style="background:#3c8a50" class="btn btn-default" type="submit" id="addressSearch">-->
-<!--                           <span class="icon-search"></span>-->
-<!--                       </button>-->
-<!--                    </span>-->
-<!--                        </div>-->
-<!--                    </form>-->
-                    <form action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">-->
-                        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                    <div class="wrap">
-                        <div class="search">
-                            <input  name="keyword" style="width: 100%; background-color: white; color: #000000; font-weight: bold" type="text" class="searchTerm" placeholder="Search your desired dataset">
-                            <button style="height: 50px; background:#3c8a50; width: 50px" type="submit" class="searchButton">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- Banner -->
 
 <!-- Main Contetn -->
@@ -230,7 +184,7 @@
             <div class="row">
               <div class="col-md-12">
                   @foreach($categories as $category)
-                  <div onclick="sectors({{$category->id}});"  class="zoom category_id col-sm-3 col-xs-6 xs-full-width">
+                  <div style="cursor: pointer;" onclick="sectors({{$category->id}});"  class="zoom category_id col-sm-3 col-xs-6 xs-full-width">
                       <div class="quick-links-figure">
                           <img style="opacity: 0.5" src="{{ URL::asset('public/uploads/sectors/'.$category->bg_pic) }}" alt="">
 
