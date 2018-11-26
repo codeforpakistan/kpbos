@@ -22,16 +22,17 @@
     <link href="{{ URL::asset('assets/css/responsive.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/transition.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/footer.css') }}" href="" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <!--    <link href="{{ URL::asset('assets/css/round-about.css') }}" href="" rel="stylesheet">-->
 
     <!--    <link href="{{ URL::asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" href="" rel="stylesheet">-->
 
     <!-- FontsOnline -->
-    <link href="../../../fonts.googleapis.com/cssfa63.css?family=Varela+Round" rel="stylesheet">
-    <link href="../../../fonts.googleapis.com/csse3e5.css?family=Montserrat:400,700" rel="stylesheet">
-    <link href="../../../fonts.googleapis.com/css3650.css?family=Cinzel:400,700,900" rel="stylesheet">
-    <link href="../../../fonts.googleapis.com/css93ec.css?family=Abel" rel="stylesheet">
-    <link href="../../../fonts.googleapis.com/css8773.css?family=Merriweather:300,400,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
     <!-- JavaScripts -->
     <script src="{{ URL::asset('assets/scripts/modernizr.js') }}" src=""></script>
     <style type="text/css">
@@ -69,11 +70,7 @@
             animation: bounce 0.5s infinite linear;
             colr:000;
         }
-        .fa-twitter{
-            color: #027bdd;
-            font-size: 30px;
-            margin: 20px;
-        }
+
         @-webkit-keyframes bounce {
             0% { top: 0; }
             50% { top: -0.2em; }
@@ -229,7 +226,7 @@
                 <br><br>
                 <div class="container" style="padding-left: 50px; padding-right: 50px;">
                 <h2 align="left" style="color: white"> The home to KP's open data </h2>
-                <p  style="letter-spacing: normal;margin: 0 0 100px;line-height: 22px;font-size: 19px;color: white;font-family: roboto !important;">
+                <p  style="letter-spacing: normal;margin: 0 0 100px;line-height: 22px;font-size: 19px;color: white;">
                 @foreach($about_us as $about)
                 {{ $about->description }}
                 @endforeach
@@ -300,7 +297,7 @@
                 <a href="{{ url('all_achievement') }}">Achievements</a>
                 ·
 
-                ·
+
                 <a href="{{ url('allpublications') }}">Publications</a>
 
 
