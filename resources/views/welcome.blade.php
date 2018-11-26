@@ -171,7 +171,7 @@
 
 <!--Department Section-->
 <section class="quick-links tc-padding white-bg">
-    <div class="container">
+    <div class="container" style="width: 80%;">
         <div class="row">
             <div class="main-heading" align="center">
 
@@ -208,7 +208,7 @@
 
 <!-- Publications -->
 <section class="tc-padding" style="background-color: #3c8a50;">
-    <div class="container">
+    <div class="container" style="width: 80%;">
 
         <!-- Main Heading -->
         <div class="main-heading-holder">
@@ -228,7 +228,7 @@
                 <div class="col-sm-3 col-xs-6 xs-full-width">
                     <div class="services-column">
                         <div class="services-icon">
-                            <a href="public/uploads/uplications/{{ $publication->file_name }}" download> <img style="width: 150px; height: 200px;" class="img img-rounded" src="public/uploads/publications/{{ $publication->file_cover_pic }}" alt="">
+                            <a href="public/uploads/publications/{{ $publication->file_name }}" download> <img style="width: 150px; height: 200px;" class="img img-rounded" src="public/uploads/publications/{{ $publication->file_cover_pic }}" alt="">
                             </a>
                         </div>
                         <h5 style="color: white">Book on Statistics</h5>
@@ -251,7 +251,7 @@
 
 <!-- Publications -->
 <section class="tc-padding">
-    <div class="container">
+    <div class="container" style="width: 80%;">
 
         <!-- Main Heading -->
         <div class="main-heading-holder">
@@ -272,7 +272,7 @@
                 <div class="col-sm-3 col-xs-6 xs-full-width">
                     <div class="services-column">
                         <div class="services-icon">
-                            <a href="public/uploads/uplications/{{ $publication->file_name }}" download> <img style="width: 150px; height: 200px;" class="img img-rounded" src="public/uploads/publications/{{ $publication->file_cover_pic }}" alt="">
+                            <a href="public/uploads/publications/{{ $publication->file_name }}" download> <img style="width: 150px; height: 200px;" class="img img-rounded" src="public/uploads/publications/{{ $publication->file_cover_pic }}" alt="">
                             </a>
                         </div>
                         <h5>Book on Statistics</h5>

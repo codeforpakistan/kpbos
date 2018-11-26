@@ -60,6 +60,51 @@
             }
         }
 
+        .bounce {
+            display: inline-block;
+            position: relative;
+            -moz-animation: bounce 0.5s infinite linear;
+            -o-animation: bounce 0.5s infinite linear;
+            -webkit-animation: bounce 0.5s infinite linear;
+            animation: bounce 0.5s infinite linear;
+            colr:000;
+        }
+        .fa-twitter{
+            color: #027bdd;
+            font-size: 30px;
+            margin: 20px;
+        }
+        @-webkit-keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+        @-moz-keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+        @-o-keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+        @-ms-keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+        @keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+
     </style>
 </head>
 <body class="bg-pattern">
@@ -111,6 +156,9 @@
 
 
             <!-- Nav Lsit -->
+            <div class="container">
+
+
             <div class="nav-inner after-clear">
                 <ul id="responsive-menu" class="nav-list">
                     @foreach($menus as $menu)
@@ -173,21 +221,22 @@
                     <li><a href="#"><img src="assets/images/flags/flag.jpg" alt=""></a></li>
                 </ul>
             </div>
+            </div>
 
             <div>
 
                 <!--                <span>Khyber Pakhtunkhwa  Bureau Of Statistics</span>-->
                 <br><br>
-                <div class="container">
-                <h2 align="center" style="color: #000000">About Khyber Pakhtunkhwa Bureau of Statistics </h2>
-                <p class="font-cinzel" style=" letter-spacing: normal; margin: 0 0 100px;line-height: 22px;font-size: 19px;color: #000000;font-family: "roboto", sans-serif; text-align: justify ">
+                <div class="container" style="padding-left: 50px; padding-right: 50px;">
+                <h2 align="left" style="color: white"> The home to KP's open data </h2>
+                <p  style="letter-spacing: normal;margin: 0 0 100px;line-height: 22px;font-size: 19px;color: white;font-family: roboto !important;">
                 @foreach($about_us as $about)
                 {{ $about->description }}
                 @endforeach
                 </p>
 
                 </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 65px;">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style=" padding-bottom: 150px; background-color: #efefef">
                     <div class="caption h-white p-white">
 
                         <!--                    <img class="signature" src="assets/images/signature.png" alt="">-->
@@ -202,11 +251,16 @@
                         <!--                    </span>-->
                         <!--                        </div>-->
                         <!--                    </form>-->
+
                         <form action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">
                             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                             <div class="wrap">
+                                <div>
+                                    <p align="center" style="color: #000000;font-weight:700;font-size: 20px; ">GET STARTED<br><span style="color: #999;font-weight:700;font-size: 15px ">SEARCH OVER 300+ DATASETS</span><br> <i class="fa fa-caret-down bounce"></i></p>
+
+                                </div>
                                 <div class="search">
-                                    <input  name="keyword" style="width: 100%; background-color: white; color: #000000; font-weight: bold" type="text" class="searchTerm" placeholder="Search your desired dataset">
+                                    <input  name="keyword" style="width: 100%; background-color: white; color: #000000;" type="text" class="searchTerm" placeholder="Search your desired dataset">
                                     <button style="height: 50px; background:#3c8a50; width: 50px" type="submit" class="searchButton">
                                         <i class="fa fa-search"></i>
                                     </button>
