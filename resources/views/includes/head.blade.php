@@ -27,11 +27,11 @@
 <!--    <link href="{{ URL::asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" href="" rel="stylesheet">-->
 
     <!-- FontsOnline -->
-    <link href="../../../fonts.googleapis.com/cssfa63.css?family=Varela+Round" rel="stylesheet">
-    <link href="../../../fonts.googleapis.com/csse3e5.css?family=Montserrat:400,700" rel="stylesheet">
-    <link href="../../../fonts.googleapis.com/css3650.css?family=Cinzel:400,700,900" rel="stylesheet">
-    <link href="../../../fonts.googleapis.com/css93ec.css?family=Abel" rel="stylesheet">
-    <link href="../../../fonts.googleapis.com/css8773.css?family=Merriweather:300,400,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
     <!-- JavaScripts -->
     <script src="{{ URL::asset('assets/scripts/modernizr.js') }}" src=""></script>
     <style type="text/css">

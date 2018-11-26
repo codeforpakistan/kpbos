@@ -6,9 +6,9 @@
 </style>
 @section('middle')
 
-<div class="container">
+<div class="container" style="width: 80%; padding-top: 2%;">
     <div class="row" style="padding-top: 20px;">
-        <div class="col-md-6">
+        <div class="col-md-6" style="padding:5%;">
             <h3 class="text-center">Contact Us Directly</h3>
             <p style="font-size: 15px;">Comments and suggestions from esteemed visitors to our website would be welcome and appreciated to provide us the basis to further improve our services.</p>
             <div class="row">
@@ -44,15 +44,15 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="well well-sm">
+        <div class="col-md-6" style="padding:5%;">
+            <div>
                 <form class="form-horizontal" action="" method="post">
-                    <fieldset>
-                       <h4 align="center">Contact Us Through E-mail</h4>
+
+                       <h3 align="center">Contact Us Through E-mail</h3>
 
                         <!-- Name input-->
                         <div class="form-group">
-                            <label class="col-md-3 control-label" for="name">Name</label>
+                            <label style="text-align: left" class="col-md-3 control-label" for="name">Name</label>
                             <div class="col-md-9">
                                 <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
                             </div>
@@ -60,7 +60,7 @@
 
                         <!-- Email input-->
                         <div class="form-group">
-                            <label class="col-md-3 control-label" for="email">Your E-mail</label>
+                            <label style="text-align: left" class="col-md-3 control-label" for="email">Your E-mail</label>
                             <div class="col-md-9">
                                 <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
                             </div>
@@ -68,9 +68,9 @@
 
                         <!-- Message body -->
                         <div class="form-group">
-                            <label class="col-md-3 control-label" for="message">Your message</label>
+                            <label style="text-align: left" class="col-md-3 control-label" for="message">Your message</label>
                             <div class="col-md-9">
-                                <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+                                <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="2"></textarea>
                             </div>
                         </div>
 
@@ -80,7 +80,7 @@
                                 <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                             </div>
                         </div>
-                    </fieldset>
+
                 </form>
             </div>
         </div>

@@ -5,10 +5,10 @@
 <!--    <link href="{{ URL::asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" href="" rel="stylesheet">-->
 
 <!-- Page Content -->
-<div class="container" style="margin-top: 20px;">
+<div class="container" style="margin-top: 20px; width: 80%;" >
 
     <!-- Introduction Row -->
-    <h1 align="center">About Us
+    <h1 align="center" style="padding-top: 20px;">About Us
 
     </h1>
 
