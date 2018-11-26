@@ -111,6 +111,8 @@
 
 
             <!-- Nav Lsit -->
+        <div class="container">
+
             <div class="nav-inner after-clear">
                 <ul id="responsive-menu" class="nav-list">
                     @foreach($menus as $menu)
@@ -173,6 +175,7 @@
                     <li><a href="#"><img src="assets/images/flags/flag.jpg" alt=""></a></li>
                 </ul>
             </div>
+        </div>
 
             <div>
 
