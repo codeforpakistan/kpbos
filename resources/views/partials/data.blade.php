@@ -67,11 +67,10 @@
 
 
                    <?php
-                }</ul>
-                ?> <?php
+                }
+                ?> </ul></div><?php
             }
             ?>
-    </div>
 </div>
 
 @endsection()
