@@ -23,7 +23,9 @@
     .dataset-resources li {
         display: inline; margin-left: 2%; list-style: none;
 }
-
+.dataset-resources ul {
+       margin-bottom: 2%;
+}
 
 
 </style>
@@ -43,7 +45,7 @@
             <?php
             $result2 = $response_data->result;
             foreach ($result2->results as $key => $value){
-               ?>         <div class="card" style="margin:0 auto;">
+               ?>         <div class="card" style="margin-bottom:2%; width:100%">
                         <h4 style=" text-transform: capitalize; margin:2%;"><a href="http://13.76.133.211/dataset/{{$value->name}}" target="_blank">{{$value->title}}</a></h4>
                 <p style="margin-left:2%">{{$value->notes}}</p>
                 <ul class="dataset-resources">
