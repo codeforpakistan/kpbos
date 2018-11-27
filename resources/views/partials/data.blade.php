@@ -23,7 +23,7 @@
     .dataset-resources li {
         display: inline; margin-left: 2%; list-style: none;
 }
-.ul {
+    .card ul {
        margin-bottom: 2% !important;
 }
 
