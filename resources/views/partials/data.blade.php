@@ -21,7 +21,7 @@
         background-color: #0b4498;
     }
     .dataset-resources li {
-        display: inline; margin: 0; list-style: none;
+        display: inline; margin-left: 2%; list-style: none;
 }
 
 
@@ -40,11 +40,11 @@
         }
        ?>
         <h1 style="width:100%;font-size: 35px;text-align:center; margin:3%;">{{ $count }} Results Found</h1>
-        <div class="card" style="margin:0 auto;">
             <?php
             $result2 = $response_data->result;
             foreach ($result2->results as $key => $value){
-               ?> <h4 style=" text-transform: capitalize; margin:2%;"><a href="http://13.76.133.211/dataset/{{$value->name}}" target="_blank">{{$value->title}}</a></h4>
+               ?>         <div class="card" style="margin:0 auto;">
+                        <h4 style=" text-transform: capitalize; margin:2%;"><a href="http://13.76.133.211/dataset/{{$value->name}}" target="_blank">{{$value->title}}</a></h4>
                 <p style="margin-left:2%">{{$value->notes}}</p>
                 <ul class="dataset-resources">
                 <?php
@@ -67,8 +67,8 @@
 
 
                    <?php
-                }
-                ?> </ul><?php
+                }</ul>
+                ?> <?php
             }
             ?>
     </div>
