@@ -24,7 +24,7 @@
         display: inline; margin-left: 2%; list-style: none;
 }
 .ul {
-       margin-bottom: 2%;
+       margin-bottom: 2% !important;
 }
 
 
