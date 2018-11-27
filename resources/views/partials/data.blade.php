@@ -1,3 +1,4 @@
+
 @extends('includes.head')
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
@@ -19,6 +20,11 @@
     .label[data-format=PDF], .label[data-format*=PDF] {
         background-color: #0b4498;
     }
+    .dataset-resources li {
+        display: inline; margin: 0; list-style: none;
+}
+
+
 
 </style>
 @section('middle')
@@ -36,32 +42,32 @@
         <h1 style="width:100%;font-size: 35px;text-align:center; margin:3%;">{{ $count }} Results Found</h1>
         <div class="card" style="margin:0 auto;">
             <?php
-
             $result2 = $response_data->result;
             foreach ($result2->results as $key => $value){
                ?> <h4 style=" text-transform: capitalize; margin:2%;"><a href="http://13.76.133.211/dataset/{{$value->name}}" target="_blank">{{$value->title}}</a></h4>
                 <p style="margin-left:2%">{{$value->notes}}</p>
+                <ul class="dataset-resources">
                 <?php
                 foreach ($value->resources as $key2 => $value2) {
                      ?>
 
                      @if($value2->format=='XLSX')
-                     <span style="font-size: 20px;margin-left:2%"><a href="{{ $value2->url }}" class="label" data-format="XLSX">Xls</a></span>
+                     <li><a href="{{ $value2->url }}" class="label" data-format="XLSX">Xls</a></li>
                      @elseif($value2->format=='DOCX')
-                     <span style="font-size: 20px;margin-left:2%"><a href="{{ $value2->url }}" class="label" data-format="DOCX">DOCX</a></span>
+                     <a href="{{ $value2->url }}" class="label" data-format="DOCX">DOCX</a></li>
                     @elseif($value2->format=='PDF')
-                    <span style="font-size: 20px;margin-left:2%"><a href="{{ $value2->url }}" class="label" data-format="PDF">PDF</a></span>
+                    <li><a href="{{ $value2->url }}" class="label" data-format="PDF">PDF</a></li>
                     @elseif($value2->format=='CSV')
-                    <span style="font-size: 20px;margin-left:2%"><a href="{{ $value2->url }}" class="label" data-format="CSV">CSV</a></span>
+                    <li><a href="{{ $value2->url }}" class="label" data-format="CSV">CSV</a></li>
                     @elseif($value2->format=='JSON')
-                    <span style="font-size: 20px;margin-left:2%"><a href="{{ $value2->url }}" class="label" data-format="JSON">JSON</a></span>
+                    <li><a href="{{ $value2->url }}" class="label" data-format="JSON">JSON</a></li>
                     @elseif($value2->format=='ODS')
-                    <span style="font-size: 20px;margin-left:2%"><a href="{{ $value2->url }}" class="label" data-format="DOCX">ODS</a></span>
+                    <li><a href="{{ $value2->url }}" class="label" data-format="DOCX">ODS</a></li>
                      @endif
 
 
                    <?php
-                }
+                }</ul>
                 ?> <?php
             }
             ?>
