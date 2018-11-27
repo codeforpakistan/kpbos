@@ -23,7 +23,7 @@
     .dataset-resources li {
         display: inline; margin-left: 2%; list-style: none;
 }
-ul {
+.ul {
        margin-bottom: 2%;
 }
 
