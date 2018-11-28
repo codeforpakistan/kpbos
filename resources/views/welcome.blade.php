@@ -302,6 +302,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
     function sectors(id){
+
         $.get('getsubcategories/'+id,function(response){
            var $el=$('#sectors');
             $el.empty();
@@ -310,15 +311,17 @@
             $.each(response,function(key,value){
                 console.log(response);
                 if(value.name==null){
-
+                   cat_name=value.khan;
+                    description=value.description;
                 }
                 else{
                     $el.append('<a href="{{ url('department') }}/'+value.id+ '"> <li ><i class="glyphicon glyphicon-download" style="color: #008000"></i>  '+value.name+'</li>')
-
+                    cat_name=value.cat_name;
+                    description=value.description;
                 }
-               cat_name=value.cat_name;
-               description=value.description;
+
             });
+
 
             $('#sector_description').text(description);
             $('#title').text(cat_name);

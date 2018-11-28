@@ -23,6 +23,7 @@ class publicationuploadController extends Controller
     $uploads=DB::Table('publication_uploads')->get();
 
      $publications=DB::Table('publications')->get();
+
      return view('admin.publication_uploads',array('uploads'=>$uploads,'publications'=>$publications));
     }
 
@@ -98,6 +99,11 @@ class publicationuploadController extends Controller
     public function edit($id)
     {
         //
+
+        $data=DB::Table('publication_uploads')->where('id',$id)->get();
+        $publications=DB::Table('publications')->get();
+        return view('admin.edit_publication_uploads',array('data'=>$data,'publications'=>$publications));
+
     }
 
     /**
@@ -123,5 +129,42 @@ class publicationuploadController extends Controller
         //
        DB::Table('publication_uploads')->where('id',$id)->delete();
         return back();
+    }
+
+    public function update_publications_uploads(Request $request){
+        $file=$request->file('image');
+        if(isset($file)){
+            $image=$file->getClientOriginalName();
+            $file->move('public/uploads/publications/',$image);
+        }
+        else{
+            $image=$request['old_image'];
+        }
+
+
+
+        $file=$request->file('cover');
+        if(isset($file)){
+            $coverpic=$file->getClientOriginalName();
+            $file->move('public/uploads/publications/',$coverpic);
+        }
+        else{
+            $coverpic=$request['old_cover'];
+        }
+
+
+        $data=array(
+            'publication_id'=>$request['publication_id'],
+            'file_name'=>$image,
+            'file_cover_pic'=>$coverpic,
+            'file_title'=>$request['file_title'],
+            'period'=>$request['period'],
+            'type'=>$request['type']
+        );
+        DB::Table('publication_uploads')->where('id',$request['id'])->update($data);
+        return redirect('publications_uploads');
+
+
+
     }
 }

@@ -63,7 +63,7 @@
 <div style="margin-left: 2%; margin-right: 2%;min-height: 500px;">
 <h1 class="box-title" align="center" style="margin-top: 2%; ">
    @if(isset($name))
-
+     {{ $name }}
     @else
     Publications
     @endif
@@ -89,7 +89,7 @@
 
     <!-- Publications -->
     <section class="tc-padding ">
-        <div class="container">
+        <div class="container" style="width: 80%;">
 
             <!-- Main Heading -->
             <div class="main-heading-holder">
