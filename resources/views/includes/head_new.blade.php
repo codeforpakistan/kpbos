@@ -303,6 +303,10 @@
 
             </p>
 
+            <p>
+                <strong style="color: white;">Last Updated: 28th November 2018</strong>
+            </p>
+
 
         </div>
 
@@ -340,6 +344,17 @@
                 <a href="#"><i class="fa fa-github"></i></a>
 
             </div>
+
+            <div>
+                <p>VISITORS: <a href="https://smallseotools.com/visitor-hit-counter/" target="_blank" title="Web Counter">
+                        <img src="https://smallseotools.com/counterDisplay?code=abeeea78753b1d58ab1f336a97e06d68&style=0006&pad=5&type=page&initCount=0"  title="Web Counter" Alt="Web Counter" border="0">
+                    </a></p>
+            </div>
+
+
+
+
+
 
         </div>
 

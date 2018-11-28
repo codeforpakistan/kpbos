@@ -95,6 +95,7 @@ Route::post('editsubcategory','subcategoryController@editsubcategory');
 
 
 Route::Resource('publications_uploads','publicationuploadController');
+Route::post('update_publications_uploads','publicationuploadController@update_publications_uploads');
 
 
 Route::Resource('news','newsController');
