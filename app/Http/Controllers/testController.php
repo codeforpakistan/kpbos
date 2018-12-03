@@ -46,6 +46,8 @@ class testController extends Controller
             return $subcategories;
         }
 
+
+
         return $subcategories;
     }
     public function allpublications(){
@@ -83,7 +85,7 @@ class testController extends Controller
     public function main_menu($id){
         $menu= DB::Table('menus')->where('id',$id)->get();
 
-        if($menu[0]->name=='home'){
+        if($menu[0]->name=='Home'){
             return redirect('/');
         }
 
@@ -161,6 +163,9 @@ class testController extends Controller
 //        exit();
         if(count($subcategory)>0){
 //            echo $subcategory[0]->name;
+//            $keyword = preg_replace('/\s+/', '_', $subcategory[0]->name);
+
+
             $keyword = preg_replace('/\s+/', '_', $subcategory[0]->name);
 
 
@@ -181,6 +186,9 @@ class testController extends Controller
 
             $response = curl_exec($curl);
             $response_data = json_decode($response);
+
+
+
 
 //        echo "<pre>";
 //        print_r($response_data);
