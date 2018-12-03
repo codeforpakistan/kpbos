@@ -122,7 +122,7 @@
                                 </tr>
                                 <tr>
                                     <?php $publication_title=$publication->file_title;
-                                    $publication_title=substr ($publication_title, 0, 7);
+                                    $publication_title=substr ($publication_title, 0, 25);
                                     ?>
 
                                     <h5>{{ $publication_title }}</h5>
