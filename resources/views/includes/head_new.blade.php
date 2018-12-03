@@ -135,9 +135,9 @@
                     <div class="col-lg-2 col-sm-5 col-xs-5" style="margin-top: 30px;">
                         <div>
 
-                            <a style="display: inline" target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER"><img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter_30x30.png" border=0></a>
-                            <a style="display: inline" target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER"><img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter-b_30x30.png" border=0></a>
-                            <a style="display: inline" target="_blank" title="find us on Facebook" href="http://www.facebook.com/PLACEHOLDER"><img alt="follow me on facebook" src="//login.create.net/images/icons/user/facebook_30x30.png" border=0></a>
+                            <a style="display: inline" target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER"><img alt="follow me on twitter" src="{{ url('public/twitter.png') }}" border=0></a>
+
+                            <a style="display: inline" target="_blank" title="find us on Facebook" href="http://www.facebook.com/PLACEHOLDER"><img alt="follow me on facebook" src="{{ url('public/facebook.png') }}" border=0></a>
                         </div>
                     </div>
 

@@ -115,7 +115,7 @@ class testController extends Controller
 
 
     public function allnews(){
-      $news=  DB::Table('news_and_events')->get();
+      $news=  DB::Table('news_and_events')->orderBY('id','DESC')->get();
       return view('partials.news',array('news'=>$news));
     }
     public function singlenews($id){
