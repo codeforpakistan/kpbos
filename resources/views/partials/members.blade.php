@@ -8,9 +8,10 @@
 <div class="container">
 
     <!-- Introduction Row -->
-    <h1 align="center" style="padding:5%;">Organization Hierarchy
+    <h1 align="center" style="padding-top:5%;">Organization Hierarchy
 
     </h1>
+
 
 
     <!-- Team Members Row -->
@@ -31,7 +32,7 @@
             <br>
 
         </div>
-        <br>
+        
         @endforeach
 
     </div>

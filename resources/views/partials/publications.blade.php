@@ -35,7 +35,7 @@
         width: 100%;
         opacity: 0;
         transition: .5s ease;
-        /*background-color: rgba(151, 151, 151, 1);*/
+        background-color: rgba(151, 151, 151, 1);
         background-color: #008CBA;
     }
 
@@ -105,37 +105,56 @@
                     <?php $count=1; ?>
                     @foreach($allpublications  as $publication)
                     <div class="col-sm-3 col-xs-6 xs-full-width khan">
+
                         <div class="services-column zoom">
-                            <div class="services-icon">
-                                <a href="public/uploads/uplications/{{ $publication->file_name }}" download>
-                                    @if($publication->file_cover_pic=="")
-                                    <img style="width: 150px; height: 200px;" class="image img img-rounded" src="{{ URL::asset('public/uploads/publications/DS KP.jpg') }}" src="" alt="">
-                                    @else
-                                    <img style="width: 150px; height: 200px;" class="image img img-rounded" src="{{ URL::asset('public/uploads/publications/'.$publication->file_cover_pic) }}"  alt="">
-                                    @endif
-                                </a>
-                            </div>
-                            <h5>{{ $count }}.{{ $publication->file_title }}</h5>
-                            <h4>   <a style="color: #008000; font-weight: bold" href="{{ url('public/uploads/publications/'.$publication->file_name) }}" download ><i class="fa fa-download fa-fw"></i>Download</a>
-                            </h4>
-                            <h5> <form  action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">
-                                    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                                    <input type="hidden" name="keyword" value="{{ $publication->file_title}}" style=" color: #000000;" class="form-control" type="text" placeholder="Search your desired dataset">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <div class="services-icon">
+                                        <a href="public/uploads/uplications/{{ $publication->file_name }}" download>
+                                            @if($publication->file_cover_pic=="")
+                                            <img style="width: 150px; height: 200px;" class="image img img-rounded" src="{{ URL::asset('public/uploads/publications/DS KP.jpg') }}" src="" alt="">
+                                            @else
+                                            <img style="width: 150px; height: 200px;" class="image img img-rounded" src="{{ URL::asset('public/uploads/publications/'.$publication->file_cover_pic) }}"  alt="">
+                                            @endif
+                                        </a>
+                                    </div>
+                                </tr>
+                                <tr>
+                                    <?php $publication_title=$publication->file_title;
+                                    $publication_title=substr ($publication_title, 0, 7);
+                                    ?>
 
-                                    <input type="submit" value="datasets" style="height: 37px; line-height: 37px; width: 40%;" class="btn btn-primary btn-sm">
-                                </form>
+                                    <h5>{{ $publication_title }}</h5>
+                                </tr>
+                                <tr>
+                                    <div style="margin-left: -15%;">
+                                    <h5>
 
-                            </h5>
 
-                            <div class="overlay">
-                                <div style="margin-top: 130px;">
-                                <h4>   <a style="color: #008000; font-weight: bold" href="{{ url('public/uploads/publications/'.$publication->file_name) }}" download ><i class="fa fa-download fa-fw"></i>Download</a>
+                                    </h5>
+                                    </div>
+
+
+                                </tr>
+                                </tbody>
+                            </table>
+
+
+
+
+
+                            <div class="overlay" style="height: 85%;">
+                                <div style="margin-top: 70px;">
+                                    <h4 style="color: #000000; font-size: 14px;">{{ $publication->file_title }}</h4>
+                                <h4>   <a style="color: white; font-weight: bold;font-size: 14px;" href="{{ url('public/uploads/publications/'.$publication->file_name) }}" download ><i class="fa fa-download fa-fw"></i>Download Publication</a>
                                 </h4>
-                                <h5> <form  action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">
+                                <h5>
+                                    <form  action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">
                                         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                                         <input type="hidden" name="keyword" value="{{ $publication->file_title}}" style=" color: #000000;" class="form-control" type="text" placeholder="Search your desired dataset">
 
-                                        <input type="submit" value="datasets" style="height: 37px; line-height: 37px; width: 40%;" class="btn btn-primary btn-sm">
+                                        <input type="submit" value="Explore datasets" style="height: 37px; line-height: 37px; width: 40%;" class="btn btn-primary btn-sm">
                                     </form>
 
                                 </h5>
