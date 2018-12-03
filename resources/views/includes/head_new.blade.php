@@ -12,7 +12,8 @@
 
     <!-- StyleSheets -->
 
-    <link rel="shortcut icon" href="{{ URL::asset('public/login/logo.png') }}"  rel="shortcut icon" type="image/png">
+    <link  href="{{ URL::asset('public/favicon.ico') }}"  rel="shortcut icon" type="image/ico">
+
     <link href="{{ URL::asset('assets/css/bootstrap.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/font-awesome.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/icomoon.css') }}" href="" rel="stylesheet">
@@ -22,7 +23,6 @@
     <link href="{{ URL::asset('assets/css/responsive.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/transition.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/footer.css') }}" href="" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <!--    <link href="{{ URL::asset('assets/css/round-about.css') }}" href="" rel="stylesheet">-->
 
     <!--    <link href="{{ URL::asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" href="" rel="stylesheet">-->
@@ -226,7 +226,7 @@
                 <br><br>
                 <div class="container" style="padding-left: 50px; padding-right: 50px;">
                 <h2 align="left" style="color: white"> The home to KP's open data </h2>
-                <p  style="letter-spacing: normal;margin: 0 0 100px;line-height: 22px;font-size: 19px;color: white;">
+                <p  style="letter-spacing: normal;margin: 0 0 100px;line-height: 22px;font-size: 19px;color: white; text-align: justify">
                 @foreach($about_us as $about)
                 {{ $about->description }}
                 @endforeach
@@ -287,21 +287,21 @@
 
         <div class="footer-left">
 
-            <a href="{{ url('/') }}"><img id="loading" src="{{ URL::asset('assets/images/logo.png') }}" src="" alt="" style="height: 80px;"><span style="color: white">KPBOS</span></a>
+            <a href="{{ url('/') }}"><img id="loading" src="{{ URL::asset('assets/images/logo.png') }}" src="" alt="" style="height: 80px;"><span style="font-size: 12px; color: white"><br> Bureau Of Statistics Planning & Development Department<br>Gov of Khyber Pakhtunkhwa</span></a>
 
-            <p class="footer-links">
-                <a href="{{ url('/') }}">Home</a>
-                ·
-                <a href="{{ url('about_kpbos') }}">About Us</a>
-                ·
-                <a href="{{ url('all_achievement') }}">Achievements</a>
-                ·
+            <div class="footer-icons">
+
+                <a href="#"><i style="padding-top: 7px;" class="fa fa-facebook"></i></a>
+                <a href="#"><i style="padding-top: 7px;" class="fa fa-twitter"></i></a>
 
 
-                <a href="{{ url('allpublications') }}">Publications</a>
+            </div>
 
-
-            </p>
+            <div>
+                <p>VISITORS: <a href="#" target="_blank" title="Web Counter">
+                        <img src="https://smallseotools.com/counterDisplay?code=abeeea78753b1d58ab1f336a97e06d68&style=0006&pad=5&type=page&initCount=0"  title="Web Counter" Alt="Web Counter" border="0">
+                    </a></p>
+            </div>
 
             <p>
                 <strong style="color: white;">Last Updated: 28th November 2018</strong>
@@ -310,46 +310,60 @@
 
         </div>
 
-        <div class="footer-center">
+        <div class="footer-center" style=" margin-top: 2%;">
 
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <p><span>Bureau of Statistics,<br> Ground Floor, Benevolent Fund Building,</p>
-            </div>
 
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>+92 91 5261332</p>
-            </div>
+            <span style="font-size: 16px; color: white;">Important Links</span><br>
+            <p class="footer-links" style="padding: 10px; margin: 10px 10px 10px 10px">
+                .
+                <a href="{{ url('/') }}">Home</a> <br>
+                ·
+                <a href="{{ url('about_kpbos') }}">About Us</a><br>
+                ·
+                <a href="{{ url('all_achievements') }}">Achievements</a><br>
+                ·
+                <a href="{{ url('allpublications') }}">Publications</a><br>
 
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p><a href="mailto:support@company.com">kpkbos@gmail.com</a></p>
-            </div>
+                ·
+                <a href="{{ url('images') }}">Media</a><br>
+
+                ·
+                <a href="{{ url('allnews') }}">News And Events</a><br>
+
+
+            </p>
+
+
 
         </div>
 
-        <div class="footer-right">
+        <div class="footer-right" style=" margin-top: 2%;">
+            <div style="margin-left: 7%;"><span style="font-size: 16px; color: white;">Contact Us</span></div><br>
 
-            <p class="footer-company-about">
-                <span>Department</span>
-                Bureau Of Statistics Planning & Development Department Government of KP
-            </p>
+           <table>
+               <tbody>
+               <tr><td> <i style="margin-bottom: 30px; color: white; margin-right: 3%;"  class="fa fa-x fa-map-marker"></i></td><td>  <p style="color: white; margin-left: 10%;">Bureau of Statistics,<br> Ground Floor, Benevolent Fund Building,</p></td></tr>
+               <tr><td><i style="margin-bottom: 30px; color: white; margin-right: 3%;"  class="fa fa-x fa fa-phone"></i></td><td> <p style="color: white; margin-left: 10%;">+92 91 11183</p></td></tr>
+               <tr><td><i style="margin-bottom: 30px; color: white; margin-right: 3%;"  class="fa fa-x fa fa-envelope"></i></td><td>  <p ><a style="color: white; margin-left: 10%;" href="mailto:support@company.com">kpkbsts@gmail.com</a></p></td></tr>
+               </tbody>
+           </table>
+            <div>
 
-            <div class="footer-icons">
-
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-github"></i></a>
 
             </div>
 
             <div>
-                <p>VISITORS: <a href="https://smallseotools.com/visitor-hit-counter/" target="_blank" title="Web Counter">
-                        <img src="https://smallseotools.com/counterDisplay?code=abeeea78753b1d58ab1f336a97e06d68&style=0006&pad=5&type=page&initCount=0"  title="Web Counter" Alt="Web Counter" border="0">
-                    </a></p>
+
+
             </div>
+
+            <div>
+
+
+            </div>
+
+
+
 
 
 
