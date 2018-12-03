@@ -90,6 +90,7 @@
                         <th style="width: 10px">#</th>
                         <th>File Title</th>
                         <th>Uploaded Date</th>
+                        <th>Upload Type</th>
                         <th>Period</th>
                         <th style="width: 40%">Action</th>
                     </tr>
@@ -98,6 +99,7 @@
                         <td>{{ $count }}</td>
                         <td>{{ $upload->file_title }}</td>
                         <td>{{ $upload->created_at }}</td>
+                        <td>{{ $upload->type}}</td>
                         <td>{{ $upload->period }}</td>
                         <td>
                             <div class="col-md-1">
