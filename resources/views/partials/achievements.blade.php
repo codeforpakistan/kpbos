@@ -19,7 +19,7 @@
         <img  style="margin: auto; width: 300px; height: 200px;" src="public/uploads/achievements/{{ $achievement->pic }}">
     </div>
     <div class="col-md-8" style="margin-top: 20px;">
-       <p class="card-text">
+       <p class="card-text" style="text-align: justify">
        {{ $achievement->description }}
        </p>
     </div>
