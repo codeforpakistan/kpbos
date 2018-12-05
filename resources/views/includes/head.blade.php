@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--    <link  href="" rel="shortcut icon" type="image/png">-->
-    <title>KPBOS</title>
+    <title>KHYBER PAKHTUNKHWA | BUREA OF STATISTICS</title>
 
 
 
 
     <!-- StyleSheets -->
 
-    <link rel="shortcut icon" href="{{ URL::asset('public/favicon.ico') }}"  rel="shortcut icon" type="image/ico">
+    <link rel="shortcut icon" href="{{ URL::asset('public/favicon.ico') }}"  type="image/x-icon">
     <link href="{{ URL::asset('assets/css/bootstrap.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/font-awesome.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/icomoon.css') }}" href="" rel="stylesheet">
