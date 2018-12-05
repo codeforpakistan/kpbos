@@ -64,7 +64,9 @@
                 -webkit-transform: rotatey(359deg);
             }
         }
-
+        a:hover{
+            color: white !important;
+        }
     </style>
 </head>
 <body class="bg-pattern">
