@@ -8,6 +8,12 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
+    .services-column h5 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 12px;;
+    }
     .zoom:hover {
         -ms-transform: scale(1.1); /* IE 9 */
         -webkit-transform: scale(1.1); /* Safari 3-8 */
@@ -31,12 +37,12 @@
         bottom: 0;
         left: 0;
         right: 0;
-        height: 100%;
+        height: 90%;
         width: 100%;
         opacity: 0;
         transition: .5s ease;
         background-color: rgba(151, 151, 151, 1);
-        background-color: #008CBA;
+        background-color: #3c8a50;
     }
 
     .khan:hover .overlay {
@@ -106,7 +112,7 @@
                     @foreach($allpublications  as $publication)
                     <div class="col-sm-3 col-xs-6 xs-full-width khan">
 
-                        <div class="services-column zoom">
+                        <div class="services-column">
                             <table>
                                 <tbody>
                                 <tr>
@@ -121,11 +127,13 @@
                                     </div>
                                 </tr>
                                 <tr>
-                                    <?php $publication_title=$publication->file_title;
-                                    $publication_title=substr ($publication_title, 0, 25);
-                                    ?>
 
-                                    <h5>{{ $publication_title }}</h5>
+
+                                        <h5>{{ $publication->file_title }}</h5>
+
+
+
+
                                 </tr>
                                 <tr>
                                     <div style="margin-left: -15%;">
@@ -144,9 +152,9 @@
 
 
 
-                            <div class="overlay" style="height: 85%;">
+                            <div class="overlay" >
                                 <div style="margin-top: 70px;">
-                                    <h4 style="color: #000000; font-size: 14px;">{{ $publication->file_title }}</h4>
+                                    <h4 style="color: white;">{{ $publication->file_title }}</h4>
                                 <h4>   <a style="color: white; font-weight: bold;font-size: 14px;" href="{{ url('public/uploads/publications/'.$publication->file_name) }}" download ><i class="fa fa-download fa-fw"></i>Download Publication</a>
                                 </h4>
                                 <h5>
@@ -154,7 +162,7 @@
                                         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                                         <input type="hidden" name="keyword" value="{{ $publication->file_title}}" style=" color: #000000;" class="form-control" type="text" placeholder="Search your desired dataset">
 
-                                        <input type="submit" value="Explore datasets" style="height: 37px; line-height: 37px; width: 40%;" class="btn btn-primary btn-sm">
+                                        <input type="submit" value="Explore datasets" style="height: 37px; line-height: 37px; width: 40%; background-color: #2e6da4" class="btn btn-primary btn-sm">
                                     </form>
 
                                 </h5>
@@ -163,6 +171,21 @@
 
                         </div>
                     </div>
+
+                    <?php
+                    $window_width = "<script type='text/javascript'>document.write(window.innerWidth);</script>";
+
+                    ?>
+
+                    @if(($count>3) && ($window_width>'800'))
+                    <div class="clearfix"></div>
+
+                    <?php $count=0; ?>
+
+                    @endif
+
+
+
                     <?php $count=$count+1; ?>
                     @endforeach
 
