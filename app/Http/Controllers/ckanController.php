@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use CkanApi;
 use DateTime;
-
+use Illuminate\Support\Facades\Input;
+use Illuminate\Pagination\LengthAwarePaginator;
 class ckanController extends Controller
 {
     //
@@ -77,7 +78,7 @@ class ckanController extends Controller
 
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "http://13.76.133.211/api/3/action/package_search?q=".$keyword,
+            CURLOPT_URL => "http://13.76.133.211/api/3/action/package_search?q=".$keyword."&rows=200",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -91,26 +92,34 @@ class ckanController extends Controller
         ));
 
         $response = curl_exec($curl);
-        $response_data = json_decode($response);
+        $response_data_pg = json_decode($response);
 
 //        echo "<pre>";
 //        print_r($response_data);
 //        exit();
+        $page = Input::get('page', 1); // Get the ?page=1 from the url
+        $perPage = 10; // Number of items per page
+        $offset = ($page * $perPage) - $perPage;
+        $response_data = new LengthAwarePaginator(array_slice($response_data_pg->result->results, $offset, $perPage, true), // Only grab the items we need
+    count($response_data_pg->result->results), // Total items
+    $perPage, // Items per page
+    $page, // Current page
+    ['path' => $request->url(), 'query' => $request->query()]); // We need this so we can keep all old query parameters from the url);
+        //dd($deals);
+        return view('partials.data',array('response_data'=>$response_data,'total_datasets'=>$response_data_pg));
 
-        return view('partials.data',array('response_data'=>$response_data));
 
-
-        $result2 = $response_data->result;
-        foreach ($result2->results as $key => $value){
-            foreach ($value->resources as $key2 => $value2) {
-                echo "<pre>";
-                var_dump('link ' . $value2->url.' description : '.$value2->description );
-            }
-            echo '<pre>';
-            var_dump('dataset description: '.$value->notes);
-            echo '<pre>';
-            var_dump('dataset Title: '.$value->title);
-        }
+        // $result2 = $response_data->result;
+        // foreach ($result2->results as $key => $value){
+        //     foreach ($value->resources as $key2 => $value2) {
+        //         echo "<pre>";
+        //         var_dump('link ' . $value2->url.' description : '.$value2->description );
+        //     }
+        //     echo '<pre>';
+        //     var_dump('dataset description: '.$value->notes);
+        //     echo '<pre>';
+        //     var_dump('dataset Title: '.$value->title);
+        // }
 
 
     }

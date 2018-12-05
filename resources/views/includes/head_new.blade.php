@@ -249,8 +249,8 @@
                         <!--                        </div>-->
                         <!--                    </form>-->
 
-                        <form action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">
-                            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                        <form action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="get" accept-charset="utf-8">
+                            
                             <div class="wrap">
                                 <div>
                                     <p align="center" style="color: #000000;font-weight:700;font-size: 20px; ">GET STARTED<br><span style="color: #999;font-weight:700;font-size: 15px ">SEARCH OVER 300+ DATASETS</span><br> <i class="fa fa-caret-down bounce"></i></p>

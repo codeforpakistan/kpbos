@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use DB;
 use Hash;
 use Session;
-
+use Illuminate\Support\Facades\Input;
+use Illuminate\Pagination\LengthAwarePaginator;
 class testController extends Controller
 {
     //
@@ -156,7 +157,7 @@ class testController extends Controller
 
     }
 
-    public function department($id){
+    public function department($id,Request $request){
         $subcategory=DB::Table('sub_categories')->where('id',$id)->get();
 //        echo "<pre>";
 //        print_r($subcategory);
@@ -171,7 +172,7 @@ class testController extends Controller
 
             $curl = curl_init();
             curl_setopt_array($curl, array(
-                CURLOPT_URL => "http://13.76.133.211/api/3/action/package_search?q=".$keyword,
+                CURLOPT_URL => "http://13.76.133.211/api/3/action/package_search?q=".$keyword."&rows=200",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
@@ -185,7 +186,7 @@ class testController extends Controller
             ));
 
             $response = curl_exec($curl);
-            $response_data = json_decode($response);
+            $response_data_pg = json_decode($response);
 
 
 
@@ -193,8 +194,15 @@ class testController extends Controller
 //        echo "<pre>";
 //        print_r($response_data);
 //        exit();
-
-            return view('partials.specific_data',array('response_data'=>$response_data,'sub_category'=>$subcategory[0]->name,'filename'=>$subcategory[0]->file_name));
+            $page = Input::get('page', 1); // Get the ?page=1 from the url
+        $perPage = 10; // Number of items per page
+        $offset = ($page * $perPage) - $perPage;
+        $response_data = new LengthAwarePaginator(array_slice($response_data_pg->result->results, $offset, $perPage, true), // Only grab the items we need
+    count($response_data_pg->result->results), // Total items
+    $perPage, // Items per page
+    $page, // Current page
+    ['path' => $request->url(), 'query' => $request->query()]); // We need this so we can keep all old query parameters from the url);
+            return view('partials.specific_data',array('response_data'=>$response_data,'sub_category'=>$subcategory[0]->name,'filename'=>$subcategory[0]->file_name,'total_datasets'=>$response_data_pg));
         }
     }
 

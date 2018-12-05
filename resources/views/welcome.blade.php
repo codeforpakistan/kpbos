@@ -96,44 +96,6 @@
 <!-- Main Contetn -->
 <main>
 
-
-<!--<div class="row">-->
-<!--    <div class="main-heading" align="center" style="margin-top: 20px;">-->
-<!---->
-<!--        <h2>Messages</h2>-->
-<!--        <p>Bureau of Statistics is a provincial statistical organization and an attached department of Planning & Development Department mandated to collect, compile, analyze and disseminate official statistics relating to economic, social, demographic and other important dimensions </p>-->
-<!--    </div>-->
-<!--    <div class="row text-center">-->
-<!--        <div class="col-sm-4 col-md-4">-->
-<!--            <div class="thumbnail">-->
-<!--                <img style="width: 350px; height: 350px" src="assets/images/banner/layer-1.png" alt="Paris">-->
-<!--                <p><strong>Paris</strong></p>-->
-<!--                <p style="margin-left: 10px;">Mr. Shahram Khan Tarakai Considering health as the basic right of the common man, I believe that health is vital to democracy. I recognize Health as a key factor for development in the democratic context.</p>-->
-<!---->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col-sm-4 col-md-4">-->
-<!--            <div class="thumbnail">-->
-<!--                <img style="width: 350px; height: 350px" src="assets/images/banner/bilawal.jpg" alt="Paris">-->
-<!--                <p><strong>Bilawal Bin Khalid</strong></p>-->
-<!--                <p style="margin-left: 10px;">Mr. Shahram Khan Tarakai Considering health as the basic right of the common man, I believe that health is vital to democracy. I recognize Health as a key factor for development in the democratic context.</p>-->
-<!---->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col-sm-4 col-md-4">-->
-<!--            <div class="thumbnail">-->
-<!--                <img style="width: 350px; height: 350px" src="assets/images/banner/layer-1.png" alt="Paris">-->
-<!--                <p><strong>Paris</strong></p>-->
-<!--                <p style="margin-left: 10px;">Mr. Shahram Khan Tarakai Considering health as the basic right of the common man, I believe that health is vital to democracy. I recognize Health as a key factor for development in the democratic context.</p>-->
-<!---->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
-
-
-
 <div class="container">
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog" style="width: 1000px;">

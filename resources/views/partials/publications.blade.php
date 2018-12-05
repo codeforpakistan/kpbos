@@ -158,8 +158,8 @@
                                 <h4>   <a style="color: white; font-weight: bold;font-size: 14px;" href="{{ url('public/uploads/publications/'.$publication->file_name) }}" download ><i class="fa fa-download fa-fw"></i>Download Publication</a>
                                 </h4>
                                 <h5>
-                                    <form  action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">
-                                        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                                    <form  action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="get" accept-charset="utf-8">
+                                        
                                         <input type="hidden" name="keyword" value="{{ $publication->file_title}}" style=" color: #000000;" class="form-control" type="text" placeholder="Search your desired dataset">
 
                                         <input type="submit" value="Explore datasets" style="height: 37px; line-height: 37px; width: 40%; background-color: #2e6da4" class="btn btn-primary btn-sm">

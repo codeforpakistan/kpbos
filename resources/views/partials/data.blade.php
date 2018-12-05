@@ -35,16 +35,16 @@
 <div class="container">
     <div class="row">
 
-       <?php $result2 = $response_data->result;
+       <?php 
        $count=0;
-        foreach ($result2->results as $key => $value){
+        foreach ($total_datasets->result->results as $key => $value){
          $count=$count+1;
         }
        ?>
         <h1 style="width:100%;font-size: 35px;text-align:center; margin:3%;">{{ $count }} Results Found</h1>
             <?php
-            $result2 = $response_data->result;
-            foreach ($result2->results as $key => $value){
+            
+            foreach ($response_data as $key => $value){
                ?>         <div class="card" style="margin-bottom:2%; width:100%">
                         <h4 style=" text-transform: capitalize; margin:2%;"><a href="http://13.76.133.211/dataset/{{$value->name}}" target="_blank">{{$value->title}}</a></h4>
                 <p style="margin-left:2%">{{$value->notes}}</p>
@@ -73,6 +73,7 @@
                 ?> </ul></div><?php
             }
             ?>
+            {{$response_data->render()}}
 </div>
 
 @endsection()
