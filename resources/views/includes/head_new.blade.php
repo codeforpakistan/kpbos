@@ -101,6 +101,9 @@
             70% { top: -0.3em; }
             100% { top: 0; }
         }
+        a:hover{
+            color: white !important;
+        }
 
     </style>
 </head>
