@@ -101,7 +101,7 @@
             70% { top: -0.3em; }
             100% { top: 0; }
         }
-        a:hover{
+        li > a:hover{
             color: white !important;
         }
 

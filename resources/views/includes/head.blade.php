@@ -64,7 +64,7 @@
                 -webkit-transform: rotatey(359deg);
             }
         }
-        a:hover{
+         li > a:hover{
             color: white !important;
         }
     </style>
@@ -131,7 +131,7 @@
         <div class="container">
 
             <div class="nav-inner after-clear">
-                <ul id="responsive-menu" class="nav-list">
+                <ul id="responsive-menu" class="nav-list menu-head">
                     @foreach($menus as $menu)
                     <li style="margin-left: 28px;">
                         <a href="{{ url('main_menu') }}/{{ $menu->id }}" >{{ $menu->name }}</a>
