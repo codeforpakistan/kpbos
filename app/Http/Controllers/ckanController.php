@@ -77,7 +77,7 @@ class ckanController extends Controller
 
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
-			CURLOPT_URL => "http://13.76.133.211/api/3/action/package_search?q=".$keyword."&rows=200",
+			CURLOPT_URL => env(CKAN_URL) . "api/3/action/package_search?q=".$keyword."&rows=200",
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => "",
 			CURLOPT_MAXREDIRS => 10,

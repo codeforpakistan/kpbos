@@ -374,7 +374,7 @@ Control Sidebar Toggle Button
 
 
             <li class="treeview">
-                <a href="http://13.76.133.211" target="_blank">
+                <a href="{{ env("CKAN_URL") }}" target="_blank">
                     <i class="fa fa-dashboard"></i> <span>Ckan</span>
                 </a>
             </li>
