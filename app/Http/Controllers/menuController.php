@@ -24,16 +24,6 @@ class menuController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -41,24 +31,12 @@ class menuController extends Controller
      */
     public function store(Request $request)
     {
-        //
        $data=array(
            'name'=>$request['name'],
            'page_content'=>$request['page_content']
        );
        DB::table('menus')->insert($data);
         return back();
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**
@@ -69,9 +47,7 @@ class menuController extends Controller
      */
     public function edit($id)
     {
-        //
-      $menu= DB::table('menus')->where('id',$id)->get();
-        return $menu;
+      return DB::table('menus')->where('id',$id)->get();
     }
 
     /**
@@ -83,7 +59,6 @@ class menuController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
         $data=array(
             'name'=>$request['name']
         );
@@ -108,7 +83,7 @@ class menuController extends Controller
      */
     public function destroy($id)
     {
-      DB::table('menus')->where('id',$id)->delete();
+        DB::table('menus')->where('id',$id)->delete();
         return back();
     }
 }

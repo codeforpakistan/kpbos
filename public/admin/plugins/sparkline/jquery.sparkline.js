@@ -985,7 +985,7 @@
 
                 if (options.get('composite') && !$.data(this, '_jqs_vcanvas')) {
                     if (!$.data(this, '_jqs_errnotify')) {
-                        alert('Attempted to attach a composite sparkline to an element with no existing sparkline');
+                        // alert('Attempted to attach a composite sparkline to an element with no existing sparkline');
                         $.data(this, '_jqs_errnotify', true);
                     }
                     return;
@@ -2614,7 +2614,7 @@
          * Clear and reset the canvas
          */
         reset: function () {
-            alert('reset not implemented');
+            // alert('reset not implemented');
         },
 
         _insert: function (el, target) {
@@ -2654,42 +2654,42 @@
          * Add a shape to the end of the render queue
          */
         appendShape: function (shape) {
-            alert('appendShape not implemented');
+            // alert('appendShape not implemented');
         },
 
         /**
          * Replace one shape with another
          */
         replaceWithShape: function (shapeid, shape) {
-            alert('replaceWithShape not implemented');
+            // alert('replaceWithShape not implemented');
         },
 
         /**
          * Insert one shape after another in the render queue
          */
         insertAfterShape: function (shapeid, shape) {
-            alert('insertAfterShape not implemented');
+            // alert('insertAfterShape not implemented');
         },
 
         /**
          * Remove a shape from the queue
          */
         removeShapeId: function (shapeid) {
-            alert('removeShapeId not implemented');
+            // alert('removeShapeId not implemented');
         },
 
         /**
          * Find a shape at the specified x/y co-ordinates
          */
         getShapeAt: function (el, x, y) {
-            alert('getShapeAt not implemented');
+            // alert('getShapeAt not implemented');
         },
 
         /**
          * Render all queued shapes onto the canvas
          */
         render: function () {
-            alert('render not implemented');
+            // alert('render not implemented');
         }
     });
 

@@ -16,22 +16,6 @@ class submenuController extends Controller
         $this->middleware('checkadmin');
     }
 
-    public function index()
-    {
-        //
-
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -40,7 +24,6 @@ class submenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $menu_id=$request['menu_id'];
         $name=$request['name'];
         echo "menu id : " . $menu_id . "  name is :  " . $name ;
@@ -63,11 +46,9 @@ class submenuController extends Controller
      */
     public function show($id)
     {
-        //
-
         $submenus=DB::table('sub_menus')->where('menu_id',$id)->get();
         $menus=DB::table('menus')->get();
-         return view('admin.sub_menus',array('submenus'=>$submenus,'menus'=>$menus));
+        return view('admin.sub_menus',array('submenus'=>$submenus,'menus'=>$menus));
     }
 
     /**
@@ -78,21 +59,8 @@ class submenuController extends Controller
      */
     public function edit($id)
     {
-        //
-       $sub_menu=DB::Table('sub_menus')->where('id',$id)->get();
-       return $sub_menu;
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+        $sub_menu=DB::Table('sub_menus')->where('id',$id)->get();
+        return $sub_menu;
     }
 
     /**
@@ -103,10 +71,10 @@ class submenuController extends Controller
      */
     public function destroy($id)
     {
-        //
         DB::table('sub_menus')->where('id',$id)->delete();
         return back();
     }
+    
     public function editsubmenus(Request $request){
         $id= $request['id'];
 

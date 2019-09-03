@@ -7,5 +7,4 @@ Homestead.json
 Homestead.yaml
 .env
 /.phpintel
-/abc
-/kpbos/public/uploads/publications/
+.scannerwork/

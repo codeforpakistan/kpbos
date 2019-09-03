@@ -19,22 +19,9 @@ class publicationuploadController extends Controller
 
     public function index()
     {
-        //
-    $uploads=DB::Table('publication_uploads')->get();
-
-     $publications=DB::Table('publications')->get();
-
-     return view('admin.publication_uploads',array('uploads'=>$uploads,'publications'=>$publications));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $uploads=DB::Table('publication_uploads')->get();
+        $publications=DB::Table('publications')->get();
+        return view('admin.publication_uploads',array('uploads'=>$uploads,'publications'=>$publications));
     }
 
     /**
@@ -45,12 +32,10 @@ class publicationuploadController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $file=$request->file('image');
 
-            $file=$request->file('image');
-
-            $filename=$file->getClientOriginalName();
-            $file->move('public/uploads/publications/',$filename);
+        $filename=$file->getClientOriginalName();
+        $file->move('public/uploads/publications/',$filename);
 
         $file=$request->file('cover');
         if(isset($file)){
@@ -60,11 +45,6 @@ class publicationuploadController extends Controller
         else{
             $coverpic='';
         }
-
-
-
-
-
         $data=array(
            'publication_id'=>$request['publication_id'],
            'file_name'=>$filename,
@@ -76,7 +56,6 @@ class publicationuploadController extends Controller
         );
         DB::Table('publication_uploads')->insert($data);
         return back();
-
     }
 
     /**

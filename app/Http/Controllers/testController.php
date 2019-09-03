@@ -10,16 +10,11 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Pagination\LengthAwarePaginator;
 class testController extends Controller
 {
-    //
     public function index(){
        $categories=DB::Table('categories')->get();
        $yearlypublications=DB::Table('publication_uploads')->where('file_cover_pic','<>','')->where('type','yearly')->take(4)->get();
         $monthlypublications=DB::Table('publication_uploads')->where('type','Monthly')->take(4)->get();
         $about_us=DB::Table('about_us')->get();
-
-//        echo "<pre>";
-//        print_r($categories);
-//        exit();
 
        return view('welcome',array('categories'=>$categories,'yearly_publications'=>$yearlypublications,'monthly_publications'=>$monthlypublications,'about_us'=>$about_us));
     }
@@ -30,25 +25,12 @@ class testController extends Controller
             ->leftjoin('categories','categories.id','=','sub_categories.category_id')
             ->where('category_id',$id)
             ->get();
-        if(count($subcategories)>0){
-//            echo "<pre>";
-//            print_r($subcategories);
-//            exit();
-            return $subcategories;
-        }
-        else{
+        if(count($subcategories)==0){
             $subcategories= DB::Table('categories')
                  ->select('categories.name as khan','categories.description as description')
                 ->where('id',$id)
                 ->get();
-//            echo "<pre>";
-//            print_r($subcategories);
-//            exit();
-            return $subcategories;
         }
-
-
-
         return $subcategories;
     }
     public function allpublications(){
@@ -98,7 +80,6 @@ class testController extends Controller
               return view('partials.dynamic',array('page_content'=>$page_content));
             }
             else{
-//                echo "<h1 align='center'> Page Not Found</h1>";
                 return  view('partials.page_not_found');
             }
         }
@@ -113,7 +94,6 @@ class testController extends Controller
             return back();
         }
     }
-
 
     public function allnews(){
       $news=  DB::Table('news_and_events')->orderBY('id','DESC')->get();
@@ -140,7 +120,6 @@ class testController extends Controller
         if(count($user)>0){
             if (Hash::check($request['password'], $user[0]->password))
             {
-                // The passwords match...
                 $request->session()->put('admin_email',$request['email']);
                 return redirect('admindashboard');
             }
@@ -159,14 +138,7 @@ class testController extends Controller
 
     public function department($id,Request $request){
         $subcategory=DB::Table('sub_categories')->where('id',$id)->get();
-//        echo "<pre>";
-//        print_r($subcategory);
-//        exit();
         if(count($subcategory)>0){
-//            echo $subcategory[0]->name;
-//            $keyword = preg_replace('/\s+/', '_', $subcategory[0]->name);
-
-
             $keyword = preg_replace('/\s+/', '_', $subcategory[0]->name);
 
 
@@ -187,22 +159,17 @@ class testController extends Controller
 
             $response = curl_exec($curl);
             $response_data_pg = json_decode($response);
-
-
-
-
-//        echo "<pre>";
-//        print_r($response_data);
-//        exit();
-            $page = Input::get('page', 1); // Get the ?page=1 from the url
-        $perPage = 10; // Number of items per page
+            $page = Input::get('page', 1);
+        $perPage = 10;
         $offset = ($page * $perPage) - $perPage;
-        $response_data = new LengthAwarePaginator(array_slice($response_data_pg->result->results, $offset, $perPage, true), // Only grab the items we need
-    count($response_data_pg->result->results), // Total items
-    $perPage, // Items per page
-    $page, // Current page
-    ['path' => $request->url(), 'query' => $request->query()]); // We need this so we can keep all old query parameters from the url);
-            return view('partials.specific_data',array('response_data'=>$response_data,'sub_category'=>$subcategory[0]->name,'filename'=>$subcategory[0]->file_name,'total_datasets'=>$response_data_pg));
+        $response_data = new LengthAwarePaginator(array_slice($response_data_pg->result->results, $offset, $perPage, true),
+            count($response_data_pg->result->results), // Total items
+            $perPage,
+            $page,
+            ['path' => $request->url(), 'query' => $request->query()]
+        );
+        
+        return view('partials.specific_data',array('response_data'=>$response_data,'sub_category'=>$subcategory[0]->name,'filename'=>$subcategory[0]->file_name,'total_datasets'=>$response_data_pg));
         }
     }
 
@@ -239,9 +206,6 @@ class testController extends Controller
     public function about_kpbos(){
         $about_us= DB::Table('about_us')->take(1)->orderBY('id','DESC')->get();
         $about_us_section=DB::Table('about_us_sections')->get();
-//        echo "<pre>";
-//        print_r($about_us);
-//        exit();
         return view('partials.about_kpbos',array('about_us'=>$about_us,'about_us_sections'=>$about_us_section));
     }
 
