@@ -46,7 +46,7 @@
             
             foreach ($response_data as $key => $value){
                ?>         <div class="card" style="margin-bottom:2%; width:100%">
-                        <h4 style=" text-transform: capitalize; margin:2%;"><a href="{{ env(CKAN_URL) }}dataset/{{$value->name}}" target="_blank">{{$value->title}}</a></h4>
+                        <h4 style=" text-transform: capitalize; margin:2%;"><a href="{{ env('CKAN_URL') }}dataset/{{$value->name}}" target="_blank">{{$value->title}}</a></h4>
                 <p style="margin-left:2%">{{$value->notes}}</p>
                 <ul class="dataset-resources">
                 <?php
