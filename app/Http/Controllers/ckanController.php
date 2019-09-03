@@ -61,7 +61,6 @@ class ckanController extends Controller
 	}
 	public function datasetcreate(Request $request){
 		$name=$request['name'];
-		$title=$request['title'];
 
 		return CkanApi::dataset()->create([
 			'name' => $name . rand(1, 1000),
@@ -100,27 +99,10 @@ class ckanController extends Controller
         $response_data = new LengthAwarePaginator(
         	array_slice($response_data_pg->result->results, $offset, $perPage, true), // Only grab the items we need
     		count($response_data_pg->result->results), // Total items
-    		$perPage, // Items per page
-    		$page, // Current page
+    		$perPage,
+    		$page,
     		['path' => $request->url(), 'query' => $request->query()]
-    	); // We need this so we can keep all old query parameters from the url);
+    	);
         return view('partials.data',array('response_data'=>$response_data,'total_datasets'=>$response_data_pg));
-
-
-        // $result2 = $response_data->result;
-        // foreach ($result2->results as $key => $value){
-        //     foreach ($value->resources as $key2 => $value2) {
-        //         echo "<pre>";
-        //         var_dump('link ' . $value2->url.' description : '.$value2->description );
-        //     }
-        //     echo '<pre>';
-        //     var_dump('dataset description: '.$value->notes);
-        //     echo '<pre>';
-        //     var_dump('dataset Title: '.$value->title);
-        // }
     }
-
-
-
-
 }

@@ -19,19 +19,8 @@ class newsController extends Controller
 
     public function index()
     {
-        //
       $news= DB::Table('news_and_events')->get();
       return view('admin.news',array('news'=>$news));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**
@@ -42,7 +31,6 @@ class newsController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $data=array(
             'title'=>$request['title'],
             'description'=>$request['description'],
@@ -53,17 +41,6 @@ class newsController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -71,21 +48,7 @@ class newsController extends Controller
      */
     public function edit($id)
     {
-        //
-       $news= DB::Table('news_and_events')->where('id',$id)->get();
-        return $news;
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+       return DB::Table('news_and_events')->where('id',$id)->get();
     }
 
     /**
@@ -96,10 +59,10 @@ class newsController extends Controller
      */
     public function destroy($id)
     {
-        //
         DB::table('news_and_events')->where('id',$id)->delete();
         return back();
     }
+    
     public function editnews(Request $request){
         $id=$request['id'];
         $data=array(

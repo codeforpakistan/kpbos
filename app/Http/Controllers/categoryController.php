@@ -19,19 +19,8 @@ class categoryController extends Controller
 
     public function index()
     {
-        //
        $categories=DB::Table('categories')->get();
        return view('admin.categories',array('categories'=>$categories));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**
@@ -42,7 +31,6 @@ class categoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $file=$request->file('pic');
 
         $filename=$file->getClientOriginalName();
@@ -58,17 +46,6 @@ class categoryController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -76,21 +53,7 @@ class categoryController extends Controller
      */
     public function edit($id)
     {
-        //
-        $category=DB::Table('categories')->where('id',$id)->get();
-        return $category;
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+        return DB::Table('categories')->where('id',$id)->get();
     }
 
     /**
@@ -101,7 +64,6 @@ class categoryController extends Controller
      */
     public function destroy($id)
     {
-        //
        DB::Table('categories')->where('id',$id)->delete();
         return back();
     }
@@ -124,7 +86,6 @@ class categoryController extends Controller
             return back();
         }
         else{
-
             $data=array(
                 'name'=>$request['name'],
                 'description'=>$request['description'],
@@ -132,8 +93,5 @@ class categoryController extends Controller
             DB::Table('categories')->where('id',$request['id'])->update($data);
             return back();
         }
-
-
-
     }
 }

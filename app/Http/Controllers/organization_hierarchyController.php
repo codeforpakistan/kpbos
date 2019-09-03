@@ -14,23 +14,8 @@ class organization_hierarchyController extends Controller
      */
     public function index()
     {
-
-        //
         $members=DB::Table('members')->get();
-//        echo "<pre>";
-//        print_r($members);
-//        exit();
         return view('admin.organization_hierarchy',array('members'=>$members));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**
@@ -41,7 +26,6 @@ class organization_hierarchyController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $file=$request->file('pic');
 
         $filename=$file->getClientOriginalName();
@@ -58,17 +42,6 @@ class organization_hierarchyController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -76,21 +49,7 @@ class organization_hierarchyController extends Controller
      */
     public function edit($id)
     {
-        //
-        $member= DB::Table('members')->where('id',$id)->get();
-        return $member;
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+        return DB::Table('members')->where('id',$id)->get();
     }
 
     /**
@@ -101,10 +60,10 @@ class organization_hierarchyController extends Controller
      */
     public function destroy($id)
     {
-        //
         DB::Table('members')->where('id',$id)->delete();
         return back();
     }
+    
     public function edit_member(Request $request){
         $file=$request->file('pic');
         if(isset($file)){

@@ -9,26 +9,6 @@ use Session;
 class about_us_sectionController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -53,17 +33,6 @@ class about_us_sectionController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -71,21 +40,8 @@ class about_us_sectionController extends Controller
      */
     public function edit($id)
     {
-        //
        $single= DB::Table('about_us_sections')->where('id',$id)->get();
        return $single;
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     /**
@@ -96,10 +52,10 @@ class about_us_sectionController extends Controller
      */
     public function destroy($id)
     {
-        //
         DB::Table('about_us_sections')->where('id',$id)->delete();
         return back();
     }
+
     public function editaboutus_section(Request $request){
         echo "hello bilawla";
 
@@ -120,8 +76,6 @@ class about_us_sectionController extends Controller
             return back();
         }
         else{
-
-
             $data=array(
                 'title'=>$request['title'],
                 'description'=>$request['description']
@@ -129,8 +83,6 @@ class about_us_sectionController extends Controller
             DB::Table('about_us_sections')->where('id',$request['section_id'])->update($data);
             return back();
         }
-
-
     }
 
 }
