@@ -1326,7 +1326,7 @@ if ( typeof $.fn.dataTable == "function" &&
 	} );
 }
 else {
-	alert( "Warning: ColReorder requires DataTables 1.9.3 or greater - www.datatables.net/download");
+	// alert( "Warning: ColReorder requires DataTables 1.9.3 or greater - www.datatables.net/download");
 }
 
 

@@ -78,7 +78,7 @@ var Scroller = function ( oDTSettings, oOpts ) {
 	/* Sanity check - you just know it will happen */
 	if ( ! this instanceof Scroller )
 	{
-		alert( "Scroller warning: Scroller must be initialised with the 'new' keyword." );
+		// alert( "Scroller warning: Scroller must be initialised with the 'new' keyword." );
 		return;
 	}
 
@@ -225,7 +225,7 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 	 * Public methods
 	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-	/**
+	*
 	 * Calculate the pixel position from the top of the scrolling container for
 	 * a given row
 	 *  @param {int} iRow Row number to calculate the position of
@@ -243,7 +243,7 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 	 *        }
 	 *      } );
 	 *    } );
-	 */
+	 
 	"fnRowToPixels": function ( rowIdx, intParse, virtual )
 	{
 		var pixels;
@@ -262,7 +262,7 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 	},
 
 
-	/**
+	*
 	 * Calculate the row number that will be found at the given pixel position
 	 * (y-scroll).
 	 *
@@ -287,7 +287,7 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 	 *        }
 	 *      } );
 	 *    } );
-	 */
+	 
 	"fnPixelsToRow": function ( pixels, intParse, virtual )
 	{
 		var diff = pixels - this.s.baseScrollTop;
@@ -1183,7 +1183,7 @@ if ( typeof $.fn.dataTable == "function" &&
 }
 else
 {
-	alert( "Warning: Scroller requires DataTables 1.9.0 or greater - www.datatables.net/download");
+	// alert( "Warning: Scroller requires DataTables 1.9.0 or greater - www.datatables.net/download");
 }
 
 

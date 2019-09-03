@@ -100,17 +100,17 @@ class ckanController extends Controller
         return view('partials.data',array('response_data'=>$response_data));
 
 
-        $result2 = $response_data->result;
-        foreach ($result2->results as $key => $value){
-            foreach ($value->resources as $key2 => $value2) {
-                echo "<pre>";
-                var_dump('link ' . $value2->url.' description : '.$value2->description );
-            }
-            echo '<pre>';
-            var_dump('dataset description: '.$value->notes);
-            echo '<pre>';
-            var_dump('dataset Title: '.$value->title);
-        }
+        // $result2 = $response_data->result;
+        // foreach ($result2->results as $key => $value){
+        //     foreach ($value->resources as $key2 => $value2) {
+        //         echo "<pre>";
+        //         var_dump('link ' . $value2->url.' description : '.$value2->description );
+        //     }
+        //     echo '<pre>';
+        //     var_dump('dataset description: '.$value->notes);
+        //     echo '<pre>';
+        //     var_dump('dataset Title: '.$value->title);
+        // }
 
 
     }
