@@ -1,4 +1,4 @@
-@extends('includes.head')
+@extends('includes.head_new')
 @section('middle')
 <style>
     .zoom:hover h5{
@@ -9,6 +9,80 @@
         transform: scale(1.02);
 
 
+
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+    .search {
+        width: 100%;
+        position: relative
+    }
+
+    .searchTerm {
+        float: left;
+        width: 100%;
+        border: 3px solid #00B4CC;
+        padding: 5px;
+        height: 20px;
+        border-radius: 5px;
+        outline: none;
+        color: #9DBFAF;
+    }
+
+    .searchTerm:focus{
+        color: #00B4CC;
+    }
+
+    .searchButton {
+        position: absolute;
+
+        width: 40px;
+        height: 36px;
+        border: 1px solid #00B4CC;
+        background: #00B4CC;
+        text-align: center;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    /*Resize the wrap to see the search bar change!*/
+    .wrap{
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @media (max-width: 768px) {
+        .btn {
+            font-size:11px;
+
+        }
+    }
+
+    @media (min-width: 768px) {
+        .btn {
+            font-size:12px;
+
+        }
+    }
+
+    @media (min-width: 992px) {
+        .btn {
+            font-size:14px;
+            padding:0px 0px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .btn {
+            padding:0px 0px;
+            font-size:18px;
+        }
     }
 
 </style>
@@ -16,85 +90,11 @@
 
 <!-- Header -->
 
-<!-- Banner -->
-<div class="banner" style="height: 500px; background-color: lightcyan">
-<!--    <img   src="assets/images/banner/banner (1).jpg" alt="" >-->
-    <img   src="assets/images/banner/banner-233.jpg" alt="" style="height: 500px;" >
 
-    <div class="banner-overay">
-        <div class="container">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="caption h-white p-white">
-                    <h2 align="center" style="color: #000000">About Khyber Pakhtunkhwa Bureau of Statistics </h2>
-                    <p class="font-cinzel" style="color: #000000;font-family: "roboto", sans-serif; text-align: justify ">
-                        @foreach($about_us as $about)
-                        {{ $about->description }}
-                        @endforeach
-                    </p>
-                 </div>
-             </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="caption h-white p-white">
-
-<!--                    <img class="signature" src="assets/images/signature.png" alt="">-->
-                    <form action="{{ url('search') }}" autocomplete="off" class="form-horizontal" method="post" accept-charset="utf-8">
-                        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-                        <div class="input-group" style="background-color: white ">
-                            <input name="keyword" value="" style=" color: #000000;" class="form-control" type="text" placeholder="Search your desired dataset">
-                    <span class="input-group-btn">
-                       <button style="background:#3c8a50" class="btn btn-default" type="submit" id="addressSearch">
-                           <span class="icon-search"></span>
-                       </button>
-                    </span>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- Banner -->
 
 <!-- Main Contetn -->
 <main>
-
-
-<!--<div class="row">-->
-<!--    <div class="main-heading" align="center" style="margin-top: 20px;">-->
-<!---->
-<!--        <h2>Messages</h2>-->
-<!--        <p>Bureau of Statistics is a provincial statistical organization and an attached department of Planning & Development Department mandated to collect, compile, analyze and disseminate official statistics relating to economic, social, demographic and other important dimensions </p>-->
-<!--    </div>-->
-<!--    <div class="row text-center">-->
-<!--        <div class="col-sm-4 col-md-4">-->
-<!--            <div class="thumbnail">-->
-<!--                <img style="width: 350px; height: 350px" src="assets/images/banner/layer-1.png" alt="Paris">-->
-<!--                <p><strong>Paris</strong></p>-->
-<!--                <p style="margin-left: 10px;">Mr. Shahram Khan Tarakai Considering health as the basic right of the common man, I believe that health is vital to democracy. I recognize Health as a key factor for development in the democratic context.</p>-->
-<!---->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col-sm-4 col-md-4">-->
-<!--            <div class="thumbnail">-->
-<!--                <img style="width: 350px; height: 350px" src="assets/images/banner/bilawal.jpg" alt="Paris">-->
-<!--                <p><strong>Bilawal Bin Khalid</strong></p>-->
-<!--                <p style="margin-left: 10px;">Mr. Shahram Khan Tarakai Considering health as the basic right of the common man, I believe that health is vital to democracy. I recognize Health as a key factor for development in the democratic context.</p>-->
-<!---->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col-sm-4 col-md-4">-->
-<!--            <div class="thumbnail">-->
-<!--                <img style="width: 350px; height: 350px" src="assets/images/banner/layer-1.png" alt="Paris">-->
-<!--                <p><strong>Paris</strong></p>-->
-<!--                <p style="margin-left: 10px;">Mr. Shahram Khan Tarakai Considering health as the basic right of the common man, I believe that health is vital to democracy. I recognize Health as a key factor for development in the democratic context.</p>-->
-<!---->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
-
-
 
 <div class="container">
     <div class="modal fade" id="myModal" role="dialog">
@@ -133,7 +133,7 @@
 
 <!--Department Section-->
 <section class="quick-links tc-padding white-bg">
-    <div class="container">
+    <div class="container" style="width: 80%;">
         <div class="row">
             <div class="main-heading" align="center">
 
@@ -146,7 +146,7 @@
             <div class="row">
               <div class="col-md-12">
                   @foreach($categories as $category)
-                  <div onclick="sectors({{$category->id}});"  class="zoom category_id col-sm-3 col-xs-6 xs-full-width">
+                  <div style="cursor: pointer;" onclick="sectors({{$category->id}});"  class="zoom category_id col-sm-3 col-xs-6 xs-full-width">
                       <div class="quick-links-figure">
                           <img style="opacity: 0.5" src="{{ URL::asset('public/uploads/sectors/'.$category->bg_pic) }}" alt="">
 
@@ -170,7 +170,7 @@
 
 <!-- Publications -->
 <section class="tc-padding" style="background-color: #3c8a50;">
-    <div class="container">
+    <div class="container" style="width: 80%;">
 
         <!-- Main Heading -->
         <div class="main-heading-holder">
@@ -190,7 +190,7 @@
                 <div class="col-sm-3 col-xs-6 xs-full-width">
                     <div class="services-column">
                         <div class="services-icon">
-                            <a href="public/uploads/uplications/{{ $publication->file_name }}" download> <img style="width: 150px; height: 200px;" class="img img-rounded" src="public/uploads/publications/{{ $publication->file_cover_pic }}" alt="">
+                            <a href="public/uploads/publications/{{ $publication->file_name }}" download> <img style="width: 150px; height: 200px;" class="img img-rounded" src="public/uploads/publications/{{ $publication->file_cover_pic }}" alt="">
                             </a>
                         </div>
                         <h5 style="color: white">Book on Statistics</h5>
@@ -213,7 +213,7 @@
 
 <!-- Publications -->
 <section class="tc-padding">
-    <div class="container">
+    <div class="container" style="width: 80%;">
 
         <!-- Main Heading -->
         <div class="main-heading-holder">
@@ -234,7 +234,7 @@
                 <div class="col-sm-3 col-xs-6 xs-full-width">
                     <div class="services-column">
                         <div class="services-icon">
-                            <a href="public/uploads/uplications/{{ $publication->file_name }}" download> <img style="width: 150px; height: 200px;" class="img img-rounded" src="public/uploads/publications/{{ $publication->file_cover_pic }}" alt="">
+                            <a href="public/uploads/publications/{{ $publication->file_name }}" download> <img style="width: 150px; height: 200px;" class="img img-rounded" src="public/uploads/publications/{{ $publication->file_cover_pic }}" alt="">
                             </a>
                         </div>
                         <h5>Book on Statistics</h5>
@@ -264,6 +264,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
     function sectors(id){
+
         $.get('getsubcategories/'+id,function(response){
            var $el=$('#sectors');
             $el.empty();
@@ -271,10 +272,19 @@
             var description='';
             $.each(response,function(key,value){
                 console.log(response);
-              $el.append('<a href="{{ url('department') }}/'+value.id+ '"> <li ><i class="glyphicon glyphicon-download" style="color: #008000"></i>  '+value.name+'</li>')
-              cat_name=value.cat_name;
-               description=value.description;
+                if(value.name==null){
+                   cat_name=value.khan;
+                    description=value.description;
+                }
+                else{
+                    $el.append('<a href="{{ url('department') }}/'+value.id+ '"> <li ><i class="glyphicon glyphicon-download" style="color: #008000"></i>  '+value.name+'</li>')
+                    cat_name=value.cat_name;
+                    description=value.description;
+                }
+
             });
+
+
             $('#sector_description').text(description);
             $('#title').text(cat_name);
             $('#myModal').modal('show');

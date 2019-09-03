@@ -13,7 +13,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background-color:#33bcb8; color: #000000;">
 
-                <p class="modal-title" style="color: #000000"><b>Enter News Detail Below</b></p>
+                <p class="modal-title" style="color: #000000"><b>Enter New Member Details Below</b></p>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
@@ -53,7 +53,7 @@
         <!--  task Modal content-->
         <div class="modal-content">
             <div class="modal-header" style="background-color:#33bcb8; color: #000000;">
-                <p class="modal-title" style="color: #000000"><b>Enter News Detail Below</b></p>
+                <p class="modal-title" style="color: #000000"><b>Edit Details Below</b></p>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
@@ -98,7 +98,7 @@
     <div class="col-md-12">
         <div class="box">
             <div class="box-header with-border" >
-                <h3 class="box-title">News</h3>
+                <h3 class="box-title">Organization Hierarchy</h3>
                 <button type="sm-button" class="btn btn-primary " data-toggle="modal" data-target="#add_member" style="margin-left: 25em; float: right; height: 30px;"><i class="fa fa-plus fa-fw"></i>Add Member</button>
 
             </div>
@@ -123,14 +123,14 @@
                         <td><img src="public/uploads/members/{{ $member->pic }}" style="width: 100px; height: 100px;"></td>
 
                         <td>
-                            <div class="col-md-1">
+                            <div class="col-md-2">
                                 <button class="edit btn btn-primary btn-sm" value="{{ $member->id }}"><i class="glyphicon glyphicon-pencil"></i>Edit</button>
                             </div>
-                            <div class="col-md-1" style="margin-left: 13px;">
+                            <div class="col-md-2" style="margin-left: 13px;">
                                 <form action="{{ url('organization_hierarchy',$member->id) }}" method="post">
                                     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                                     <input type="hidden" name="_method" value="DELETE">
-                                    <button type="submit" name="add_btn" value="Delete" class="btn btn-danger btn-sm" ><i class="glyphicon glyphicon-remove"></i>Delete</button>
+                                    <button type="submit" name="add_btn" value="Delete"  onclick="return confirm('Are you sure to want to delete this?');" class="btn btn-danger btn-sm" ><i class="glyphicon glyphicon-remove"></i>Delete</button>
 
                                 </form>
                             </div>

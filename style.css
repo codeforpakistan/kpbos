@@ -306,7 +306,7 @@ color: rgba(255,255,255,0.8); font-weight: bold;}
 .nav-list > li > ul{ position: absolute; z-index: 100; top: 100%; width: 200px; border-top: 2px solid transparent;
 visibility: hidden; opacity: 0;}
 .nav-list > li > ul li{ border-bottom: 2px solid transparent; margin: 5px 0;}
-.nav-list > li > ul li a{ padding: 10px; background: #131e36; color: rgba(255,255,255,0.8);
+.nav-list > li > ul li a{ padding: 10px; background: #131e36; color: #efefef; font-size: 14px;
 font-weight: bold;}
 .nav-list > li > ul li a:hover{ margin: 0 0 0 10px;}
 .language-dropdown{ display: inline-block; float: right; line-height: 16px;}

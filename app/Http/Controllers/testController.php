@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use DB;
 use Hash;
 use Session;
-
+use Illuminate\Support\Facades\Input;
+use Illuminate\Pagination\LengthAwarePaginator;
 class testController extends Controller
 {
     //
@@ -29,34 +30,63 @@ class testController extends Controller
             ->leftjoin('categories','categories.id','=','sub_categories.category_id')
             ->where('category_id',$id)
             ->get();
+        if(count($subcategories)>0){
+//            echo "<pre>";
+//            print_r($subcategories);
+//            exit();
+            return $subcategories;
+        }
+        else{
+            $subcategories= DB::Table('categories')
+                 ->select('categories.name as khan','categories.description as description')
+                ->where('id',$id)
+                ->get();
+//            echo "<pre>";
+//            print_r($subcategories);
+//            exit();
+            return $subcategories;
+        }
+
+
 
         return $subcategories;
     }
     public function allpublications(){
       $allpublications= DB::Table('publication_uploads')
           ->paginate(8);
-      return view('partials.publications',array('allpublications'=>$allpublications));
+       $year="";
+      return view('partials.publications',array('allpublications'=>$allpublications,'year'=>$year));
     }
 
     public function publicationbydate($year){
         $allpublications= DB::Table('publication_uploads')->where('period',$year)->paginate(8);
-        return view('partials.publications',array('allpublications'=>$allpublications));
+
+        return view('partials.publications',array('allpublications'=>$allpublications,'year'=>$year));
     }
     public function allpublication($id){
         $allpublications= DB::Table('publication_uploads')->where('publication_id',$id)->paginate(8);
 
-        return view('partials.publications',array('allpublications'=>$allpublications,'id'=>$id));
+         $publications=DB::Table('publications')->where('id',$id)->get();
+         if(count($publications)>0){
+             $name=$publications[0]->name;
+         }
+        $year="";
+        return view('partials.publications',array('allpublications'=>$allpublications,'id'=>$id,'name'=>$name,'year'=>$year));
     }
     public function publicationbydat($year,$id){
         $allpublications= DB::Table('publication_uploads')->where('period',$year)->where('publication_id',$id)->paginate(5);
 
-        return view('partials.publications',array('allpublications'=>$allpublications,'id'=>$id));
+        $publications=DB::Table('publications')->where('id',$id)->get();
+        if(count($publications)>0){
+            $name=$publications[0]->name;
+        }
+        return view('partials.publications',array('allpublications'=>$allpublications,'id'=>$id,'name'=>$name,'year'=>$year));
     }
 
     public function main_menu($id){
         $menu= DB::Table('menus')->where('id',$id)->get();
 
-        if($menu[0]->name=='home'){
+        if($menu[0]->name=='Home'){
             return redirect('/');
         }
 
@@ -86,7 +116,7 @@ class testController extends Controller
 
 
     public function allnews(){
-      $news=  DB::Table('news_and_events')->get();
+      $news=  DB::Table('news_and_events')->orderBY('id','DESC')->get();
       return view('partials.news',array('news'=>$news));
     }
     public function singlenews($id){
@@ -127,19 +157,22 @@ class testController extends Controller
 
     }
 
-    public function department($id){
+    public function department($id,Request $request){
         $subcategory=DB::Table('sub_categories')->where('id',$id)->get();
 //        echo "<pre>";
 //        print_r($subcategory);
 //        exit();
         if(count($subcategory)>0){
 //            echo $subcategory[0]->name;
+//            $keyword = preg_replace('/\s+/', '_', $subcategory[0]->name);
+
+
             $keyword = preg_replace('/\s+/', '_', $subcategory[0]->name);
 
 
             $curl = curl_init();
             curl_setopt_array($curl, array(
-                CURLOPT_URL => "http://13.76.133.211/api/3/action/package_search?q=".$keyword,
+                CURLOPT_URL => "http://13.76.133.211/api/3/action/package_search?q=".$keyword."&rows=200",
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
@@ -153,13 +186,23 @@ class testController extends Controller
             ));
 
             $response = curl_exec($curl);
-            $response_data = json_decode($response);
+            $response_data_pg = json_decode($response);
+
+
+
 
 //        echo "<pre>";
 //        print_r($response_data);
 //        exit();
-
-            return view('partials.specific_data',array('response_data'=>$response_data,'sub_category'=>$subcategory[0]->name,'filename'=>$subcategory[0]->file_name));
+            $page = Input::get('page', 1); // Get the ?page=1 from the url
+        $perPage = 10; // Number of items per page
+        $offset = ($page * $perPage) - $perPage;
+        $response_data = new LengthAwarePaginator(array_slice($response_data_pg->result->results, $offset, $perPage, true), // Only grab the items we need
+    count($response_data_pg->result->results), // Total items
+    $perPage, // Items per page
+    $page, // Current page
+    ['path' => $request->url(), 'query' => $request->query()]); // We need this so we can keep all old query parameters from the url);
+            return view('partials.specific_data',array('response_data'=>$response_data,'sub_category'=>$subcategory[0]->name,'filename'=>$subcategory[0]->file_name,'total_datasets'=>$response_data_pg));
         }
     }
 
@@ -172,7 +215,7 @@ class testController extends Controller
     }
 
     public function all_images($id){
-       $images=DB::Table('media')->where('id',1)->get();
+       $images=DB::Table('media')->where('id',$id)->get();
        $event_name=$images[0]->event_name;
        $images= DB::table('media')->where('file_type','image')->where('event_name',$event_name)->get();
        return view('partials.all_images',array('images'=>$images));

@@ -38,7 +38,7 @@ Route::post('admin_login','testController@admin_login');
 
 
 
-Route::post('search','ckanController@search');
+Route::get('search','ckanController@search');
 
 Route::post('datasetcreate','ckanController@datasetcreate');
 
@@ -95,6 +95,7 @@ Route::post('editsubcategory','subcategoryController@editsubcategory');
 
 
 Route::Resource('publications_uploads','publicationuploadController');
+Route::post('update_publications_uploads','publicationuploadController@update_publications_uploads');
 
 
 Route::Resource('news','newsController');

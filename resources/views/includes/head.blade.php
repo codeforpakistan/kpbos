@@ -7,12 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--    <link  href="" rel="shortcut icon" type="image/png">-->
-    <title>KPBOS</title>
+    <title>Bureau of Statistics | Khyber Pakhtunkhwa</title>
+
+
 
 
     <!-- StyleSheets -->
 
-    <link rel="shortcut icon" href="{{ URL::asset('public/login/logo.png') }}"  rel="shortcut icon" type="image/png">
+    <link rel="shortcut icon" href="{{ URL::asset('public/favicon.ico') }}"  type="image/x-icon">
     <link href="{{ URL::asset('assets/css/bootstrap.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/font-awesome.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/icomoon.css') }}" href="" rel="stylesheet">
@@ -22,16 +24,19 @@
     <link href="{{ URL::asset('assets/css/responsive.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/transition.css') }}" href="" rel="stylesheet">
     <link href="{{ URL::asset('assets/css/footer.css') }}" href="" rel="stylesheet">
+
+
+
 <!--    <link href="{{ URL::asset('assets/css/round-about.css') }}" href="" rel="stylesheet">-->
 
 <!--    <link href="{{ URL::asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" href="" rel="stylesheet">-->
 
     <!-- FontsOnline -->
-    <link href="../../../fonts.googleapis.com/cssfa63.css?family=Varela+Round" rel="stylesheet">
-    <link href="../../../fonts.googleapis.com/csse3e5.css?family=Montserrat:400,700" rel="stylesheet">
-    <link href="../../../fonts.googleapis.com/css3650.css?family=Cinzel:400,700,900" rel="stylesheet">
-    <link href="../../../fonts.googleapis.com/css93ec.css?family=Abel" rel="stylesheet">
-    <link href="../../../fonts.googleapis.com/css8773.css?family=Merriweather:300,400,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
     <!-- JavaScripts -->
     <script src="{{ URL::asset('assets/scripts/modernizr.js') }}" src=""></script>
     <style type="text/css">
@@ -59,8 +64,20 @@
                 -webkit-transform: rotatey(359deg);
             }
         }
-
+         li > a:hover{
+            color: white !important;
+        }
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130639840-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-130639840-1');
+</script>
+
 </head>
 <body class="bg-pattern">
 
@@ -93,9 +110,9 @@
                 <div class="col-lg-2 col-sm-5 col-xs-5" style="margin-top: 30px;">
                     <div>
 
-                        <a style="display: inline" target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER"><img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter_30x30.png" border=0></a>
-                        <a style="display: inline" target="_blank" title="follow me on twitter" href="http://www.twitter.com/PLACEHOLDER"><img alt="follow me on twitter" src="//login.create.net/images/icons/user/twitter-b_30x30.png" border=0></a>
-                        <a style="display: inline" target="_blank" title="find us on Facebook" href="http://www.facebook.com/PLACEHOLDER"><img alt="follow me on facebook" src="//login.create.net/images/icons/user/facebook_30x30.png" border=0></a>
+                        <a style="display: inline" target="_blank" title="follow me on twitter" href="http://www.twitter.com/#"><img alt="follow me on twitter" src="{{ url('public/twitter.png') }}" border=0></a>
+
+                        <a style="display: inline" target="_blank" title="find us on Facebook" href="http://www.facebook.com/#"><img alt="follow me on facebook" src="{{ url('public/facebook.png') }}" border=0></a>
                     </div>
                 </div>
 
@@ -108,14 +125,16 @@
     <nav class="nav-holder">
 
         <!-- Nav Nd Caption -->
-        <div class="container">
+
 
             <!-- Nav Lsit -->
+        <div class="container">
+
             <div class="nav-inner after-clear">
-                <ul id="responsive-menu" class="nav-list">
+                <ul id="responsive-menu" class="nav-list menu-head">
                     @foreach($menus as $menu)
-                    <li>
-                        <a href="{{ url('main_menu') }}/{{ $menu->id }}">{{ $menu->name }}</a>
+                    <li style="margin-left: 28px;">
+                        <a href="{{ url('main_menu') }}/{{ $menu->id }}" >{{ $menu->name }}</a>
                         @php
                         $children = DB::table('sub_menus')->where('menu_id',$menu->id)->get();
                         @endphp
@@ -173,24 +192,26 @@
                     <li><a href="#"><img src="assets/images/flags/flag.jpg" alt=""></a></li>
                 </ul>
             </div>
+        </div>
 
             <div>
 
 <!--                <span>Khyber Pakhtunkhwa  Bureau Of Statistics</span>-->
                 <br><br>
-                <marquee scrollamount="10" onmouseover="this.stop();" onmouseout="this.start();">
-                @foreach($allnews as $news)
-                    <span style="color: white">  {{ $news->description }} </span>
-
-                @endforeach
-                </marquee>
+<!--                <marquee scrollamount="10"  onmouseover="this.stop();" onmouseout="this.start();">-->
+<!--                @foreach($allnews as $news)-->
+<!---->
+<!--                   <span style="color: white" onclick="window.location='singlenews'+'/'+--><?php //echo $news->id ?><!--">  {{ $news->description }} </span>-->
+<!---->
+<!--                @endforeach-->
+<!--                </marquee>-->
 
 
 
             </div>
             <!-- Year Quest -->
 
-        </div>
+
         <!-- Nav Nd Caption -->
 
     </nav>
@@ -200,67 +221,96 @@
 <!-- Header -->
 @yield('middle')
 <!-- Footer -->
-    <footer class="footer-distributed">
+<footer class="footer-distributed">
 
-        <div class="footer-left">
+    <div class="footer-left">
 
-            <a href="{{ url('/') }}"><img id="loading" src="{{ URL::asset('assets/images/logo.png') }}" src="" alt="" style="height: 80px;"></a>
+        <a href="{{ url('/') }}"><img id="loading" src="{{ URL::asset('assets/images/logo.png') }}" src="" alt="" style="height: 80px;"><span style="font-size: 12px; color: white"><br> Bureau Of Statistics Planning & Development Department<br>Gov of Khyber Pakhtunkhwa</span></a>
 
-            <p class="footer-links">
-                <a href="{{ url('/') }}">Home</a>
-                ·
-                <a href="{{ url('about_kpbos') }}">About Us</a>
-                ·
-                <a href="{{ url('all_achievement') }}">Achievements</a>
-                ·
+        <div class="footer-icons">
 
-                ·
-                <a href="{{ url('allpublications') }}">Publications</a>
-
-
-            </p>
+            <a href="#"><i style="padding-top: 7px;" class="fa fa-facebook"></i></a>
+            <a href="#"><i style="padding-top: 7px;" class="fa fa-twitter"></i></a>
 
 
         </div>
 
-        <div class="footer-center">
+        <div>
+            <p>VISITORS: <a href="#" target="_blank" title="Web Counter">
+                    <img src="https://smallseotools.com/counterDisplay?code=abeeea78753b1d58ab1f336a97e06d68&style=0006&pad=5&type=page&initCount=0"  title="Web Counter" Alt="Web Counter" border="0">
+                </a></p>
+        </div>
 
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <p><span>Bureau of Statistics,<br> Ground Floor, Benevolent Fund Building,</p>
-            </div>
+        <p>
+            <strong style="color: white;">Last Updated: 28th November 2018</strong>
+        </p>
 
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>+92 91 5261332/p>
-            </div>
 
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p><a href="mailto:support@company.com">kpkbos@gmail.com</a></p>
-            </div>
+    </div>
+
+    <div class="footer-center" style=" margin-top: 2%;">
+
+
+        <span style="font-size: 16px; color: white;">Important Links</span><br>
+        <p class="footer-links" style="padding: 10px; margin: 10px 10px 10px 10px">
+            .
+            <a href="{{ url('/') }}">Home</a> <br>
+            ·
+            <a href="{{ url('about_kpbos') }}">About Us</a><br>
+            ·
+            <a href="{{ url('all_achievements') }}">Achievements</a><br>
+            ·
+            <a href="{{ url('allpublications') }}">Publications</a><br>
+
+            ·
+            <a href="{{ url('images') }}">Media</a><br>
+
+            ·
+            <a href="{{ url('allnews') }}">News And Events</a><br>
+
+
+        </p>
+
+
+
+    </div>
+
+    <div class="footer-right" style=" margin-top: 2%;">
+        <div style="margin-left: 7%;"><span style="font-size: 16px; color: white;">Contact Us</span></div><br>
+
+        <table>
+            <tbody>
+            <tr><td> <i style="margin-bottom: 30px; color: white; margin-right: 3%;"  class="fa fa-x fa-map-marker"></i></td><td>  <p style="color: white; margin-left: 10%;">Bureau of Statistics,<br> Ground Floor, Benevolent Fund Building,</p></td></tr>
+            <tr><td><i style="margin-bottom: 30px; color: white; margin-right: 3%;"  class="fa fa-x fa fa-phone"></i></td><td> <p style="color: white; margin-left: 10%;">+92 91 11183</p></td></tr>
+            <tr><td><i style="margin-bottom: 30px; color: white; margin-right: 3%;"  class="fa fa-x fa fa-envelope"></i></td><td>  <p ><a style="color: white; margin-left: 10%;" href="mailto:support@company.com">kpkbsts@gmail.com</a></p></td></tr>
+            </tbody>
+        </table>
+        <div>
+
 
         </div>
 
-        <div class="footer-right">
+        <div>
 
-            <p class="footer-company-about">
-                <span>Department</span>
-                Bureau Of Statistics Planning & Development Department Government of KP
-            </p>
-
-            <div class="footer-icons">
-
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-github"></i></a>
-
-            </div>
 
         </div>
 
-    </footer>
+        <div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</footer>
 <!-- Footer -->
 
 </div>

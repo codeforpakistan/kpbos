@@ -90,6 +90,7 @@
                         <th style="width: 10px">#</th>
                         <th>File Title</th>
                         <th>Uploaded Date</th>
+                        <th>Upload Type</th>
                         <th>Period</th>
                         <th style="width: 40%">Action</th>
                     </tr>
@@ -98,10 +99,11 @@
                         <td>{{ $count }}</td>
                         <td>{{ $upload->file_title }}</td>
                         <td>{{ $upload->created_at }}</td>
+                        <td>{{ $upload->type}}</td>
                         <td>{{ $upload->period }}</td>
                         <td>
                             <div class="col-md-1">
-                                <button class="edit btn btn-primary btn-sm" value="{{ $upload->id }}"><i class="glyphicon glyphicon-pencil"></i>Edit</button>
+                               <a href="{{ url('publications_uploads') }}/{{$upload->id}}/edit"> <button class="edit btn btn-primary btn-sm" value="{{ $upload->id }}"><i class="glyphicon glyphicon-pencil"></i>Edit</button></a>
                             </div>
                             <div class="col-md-1" style="margin-left: 13px;">
                                 <form action="{{ url('publications_uploads',$upload->id) }}" method="post">
