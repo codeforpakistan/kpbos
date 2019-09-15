@@ -32,11 +32,11 @@
 <!--    <link href="{{ URL::asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" href="" rel="stylesheet">-->
 
     <!-- FontsOnline -->
-    <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
     <!-- JavaScripts -->
     <script src="{{ URL::asset('assets/scripts/modernizr.js') }}" src=""></script>
     <style type="text/css">
@@ -110,9 +110,9 @@
                 <div class="col-lg-2 col-sm-5 col-xs-5" style="margin-top: 30px;">
                     <div>
 
-                        <a style="display: inline" target="_blank" title="follow me on twitter" href="http://www.twitter.com/#"><img alt="follow me on twitter" src="{{ url('public/twitter.png') }}" border=0></a>
+                        <a style="display: inline" target="_blank" title="follow me on twitter" href="https://www.twitter.com/#"><img alt="follow me on twitter" src="{{ url('public/twitter.png') }}" border=0></a>
 
-                        <a style="display: inline" target="_blank" title="find us on Facebook" href="http://www.facebook.com/#"><img alt="follow me on facebook" src="{{ url('public/facebook.png') }}" border=0></a>
+                        <a style="display: inline" target="_blank" title="find us on Facebook" href="https://www.facebook.com/#"><img alt="follow me on facebook" src="{{ url('public/facebook.png') }}" border=0></a>
                     </div>
                 </div>
 
@@ -321,7 +321,7 @@
 <script src="{{ URL::asset('assets/scripts/jquery.js') }}" src=""></script>
 <script src="{{ URL::asset('assets/scripts/bootstrap.js') }}" src=""></script>
 <script src="{{ URL::asset('assets/scripts/jquery-ui.js') }}" src=""></script>
-<script  src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script  src="https://maps.google.com/maps/api/js?sensor=false"></script>
 <script src="{{ URL::asset('assets/scripts/gmap3.min.js') }}" src=""></script>
 <script src="{{ URL::asset('assets/scripts/menu.js') }}" src=""></script>
 <script src="{{ URL::asset('assets/scripts/rangeslider.min.js') }}" src=""></script>
