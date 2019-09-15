@@ -14,7 +14,7 @@ class ckanController extends Controller
 	public function ckan(){
 		echo "Hello bilawal u are here";
 
-		$url = 'http://demo.ckan.org/api/3/action/group_list';
+		$url = 'https://demo.ckan.org/api/3/action/group_list';
 
 		$ch = curl_init($url);
 
