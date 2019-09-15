@@ -255,7 +255,6 @@
 </main>
 
 <!-- Main Contetn -->
-@endsection
 </body>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -294,3 +293,4 @@
 
 <!-- Mirrored from techlinqs.com/html/politics/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jul 2018 10:43:04 GMT -->
 </html>
+@endsection
