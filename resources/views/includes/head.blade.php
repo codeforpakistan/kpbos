@@ -280,8 +280,8 @@
 
         <table>
             <tbody>
-            <tr><td> <i style="margin-bottom: 30px; color: white; margin-right: 3%;"  class="fa fa-x fa-map-marker"></i></td><td>  <p style="color: white; margin-left: 10%;">Bureau of Statistics,<br> Ground Floor, Benevolent Fund Building,</p></td></tr>
-            <tr><td><i style="margin-bottom: 30px; color: white; margin-right: 3%;"  class="fa fa-x fa fa-phone"></i></td><td> <p style="color: white; margin-left: 10%;">+92 91 11183</p></td></tr>
+            <tr><td> <i style="margin-bottom: 30px; color: white; margin-right: 3%;"  class="fa fa-x fa-map-marker"></i></td><td>  <p style="color: white; margin-left: 10%;">Bureau of Statistics,<br> Planning and Development Department <br> Government of Khyber Pakhtunkhwa</p></td></tr>
+            <tr><td><i style="margin-bottom: 30px; color: white; margin-right: 3%;"  class="fa fa-x fa fa-phone"></i></td><td> <p style="color: white; margin-left: 10%;">+92 91 9211183</p></td></tr>
             <tr><td><i style="margin-bottom: 30px; color: white; margin-right: 3%;"  class="fa fa-x fa fa-envelope"></i></td><td>  <p ><a style="color: white; margin-left: 10%;" href="mailto:support@company.com">kpkbsts@gmail.com</a></p></td></tr>
             </tbody>
         </table>
