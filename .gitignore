@@ -8,3 +8,7 @@ Homestead.yaml
 .env
 /.phpintel
 .scannerwork/
+HumanRights/
+humanrights/
+public/uploads
+.env.save
