@@ -44,10 +44,10 @@ class testController extends Controller
         ]);
     }
 
-    public function publicationbydate($year){
-        $allpublications= DB::Table('publication_uploads')->where('period',$year)->paginate(8);
-
-        return view('partials.publications',array('allpublications'=>$allpublications,'year'=>$year));
+    public function publicationbydate($selectedYear){
+        $allpublications= DB::Table('publication_uploads')->where('period',$selectedYear)->paginate(8);
+        $years = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', '2035', '2036', '2037', '2038', '2039', '2040', '2041', '2042', '2043', '2044', '2045', '2046', '2047', '2048', '2049', '2050'];
+        return view('partials.publications',array('allpublications'=>$allpublications,'selectedYear'=>$selectedYear,'years' => $years,));
     }
     public function allpublication($id){
         $allpublications= DB::Table('publication_uploads')->where('publication_id',$id)->paginate(8);
