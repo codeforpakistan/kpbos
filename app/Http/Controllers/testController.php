@@ -56,13 +56,13 @@ class testController extends Controller
          if(count($publications)>0){
              $name=$publications[0]->name;
          }
-        $year="";
+        $selectedYear="";
         return view('partials.publications',[
             'allpublications'=>$allpublications,
             'id'=>$id,
             'name'=>$name,
             'years' => $years,
-            'year'=>$year
+            'selectedYear'=>$selectedYear
             ]);
     }
     public function publicationbydat($year,$id){
