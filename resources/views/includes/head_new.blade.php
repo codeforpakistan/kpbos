@@ -141,7 +141,7 @@
                     </div>
                     <div class="col-lg-9  col-sm-5 col-xs-5">
                         <div class="left-side p-m-0">
-                            <p style="font-weight: bold; font-family: Arial,Helvetica Neue,Helvetica,sans-serif; color: #000000; font-size: 18px; "><span>Bureau Of Statistics Planning & Development Department<br> Government of KP</span></p>
+                            <p style="font-weight: bold; font-family: Arial,Helvetica Neue,Helvetica,sans-serif; color: #000000; font-size: 18px; "><span>Bureau Of Statistics Planning & Development Department<br> Government of Khyber Pakhtunkhwa</span></p>
                         </div>
                     </div>
 
@@ -300,7 +300,7 @@
 
         <div class="footer-left">
 
-            <a href="{{ url('/') }}"><img id="loading" src="{{ URL::asset('assets/images/logo.png') }}" src="" alt="" style="height: 80px;"><span style="font-size: 12px; color: white"><br> Bureau Of Statistics Planning & Development Department<br>Gov of Khyber Pakhtunkhwa</span></a>
+            <a href="{{ url('/') }}"><img id="loading" src="{{ URL::asset('assets/images/logo.png') }}" src="" alt="" style="height: 80px;"><span style="font-size: 12px; color: white"><br> Bureau Of Statistics Planning & Development Department<br>Government of Khyber Pakhtunkhwa</span></a>
 
             <div class="footer-icons">
 
